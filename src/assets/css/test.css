@@ -1,0 +1,104 @@
+
+    .intro {
+      position: relative;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      margin: 25px;
+      transform:rotate(45deg);
+      overflow: hidden;
+    }
+    .timeline-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      margin: 0 auto;
+      background: #EEAE1D;
+      margin-top: -4px;
+      position:relative;
+    }
+
+    .main-heading {
+      text-align: center;
+      font-size: 30px;
+      line-height: 30px;
+      position: relative;
+    }
+
+    .three-col:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    .three-col .col {
+      float: left;
+      width: 33.33%;
+      position: relative;
+       padding: 0 20px;
+    }
+
+    .sub-heading {
+      position: relative;
+      display: inline-block;
+      padding-top: 35px;
+
+    }
+
+    .three-col.bottom .col::before {
+      content: "";
+      position: absolute;
+      background: #000;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-top: 1px dashed #000;
+    }
+    .timeline-container{
+      padding-top:80px;
+    }
+
+    .three-col.bottom .col:first-child::before {
+      left: 50%;
+     }
+
+     .three-col.bottom .col:last-child::before {
+      right: 50%;
+     }
+ @media (max-width: 576px) {
+      .timeline-font{
+            font-size: 12px !important;
+      }
+      .timeline-container{
+        padding-top:30px
+      }
+      .pic {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .pic {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .pic {
+        width: 200px;
+      
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .pic {
+        width: 250px;
+      
+      }
+    }
+    
