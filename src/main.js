@@ -26,10 +26,12 @@ export default function (Vue, { router, head, isClient }) {
   // optional pluginOptions
   refreshOnceOnNavigation: true
 })
-  head.script.push({
-    src: 'assets/js/hello.js',
-    body: true
+  head.meta.push({
+    name: 'keywords',
+    content: 'Consultancy, Entrepreneurship, Entrepreneur, Innovation, Startup, Launchpad, Business, Business Idea, Workshop, Ideathon, Hackathon, Skills, become an entrepreneur, start a business, business consultants, branding service, marketing, learn about digital marketing, how to increase sales, business strategy, how to increase Instagram followers, learn to run a business, execution, funding, investment'
   })
+}
+
 
   
   Vue.component('Layout', DefaultLayout)
