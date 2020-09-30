@@ -81,32 +81,32 @@
                             <ul id="instaFeed-footer">
                                 <li>
                                     <figure>
-                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><img src="../assets/images/footer/1.png" class="insta-image" /></a>
+                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><g-image src="~/assets/images/footer/1.png" class="insta-image" /></a>
                                     </figure>
                                 </li>
                                 <li>
                                     <figure>
-                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><img src="../assets/images/footer/2.png" class="insta-image" /></a>
+                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><g-image src="~/assets/images/footer/2.png" class="insta-image" /></a>
                                     </figure>
                                 </li>
                                 <li>
                                     <figure>
-                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><img src="../assets/images/footer/3.png" class="insta-image" /></a>
+                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><g-image src="~/assets/images/footer/3.png" class="insta-image" /></a>
                                     </figure>
                                 </li>
                                 <li>
                                     <figure>
-                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><img src="../assets/images/footer/4.png" class="insta-image" /></a>
+                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><g-image src="~/assets/images/footer/4.png" class="insta-image" /></a>
                                     </figure>
                                 </li>
                                 <li>
                                     <figure>
-                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><img src="../assets/images/footer/5.png" class="insta-image" /></a>
+                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><g-image src="~/assets/images/footer/5.png" class="insta-image" /></a>
                                     </figure>
                                 </li>
                                 <li>
                                     <figure>
-                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><img src="../assets/images/footer/6.png" class="insta-image" /></a>
+                                        <a href="https://www.instagram.com/firstmain_/" target="_blank"><g-image src="~/assets/images/footer/6.png" class="insta-image" /></a>
                                     </figure>
                                 </li>
                             </ul>

@@ -34,8 +34,8 @@
             <!--end-project-info-->
             <div class="row justify-content-center">
                 <div class="d-flex width-90 spring-first-blob position-absolute justify-content-between align-items-end">
-                    <img class="sm-height-50px" src="../assets/images/learning/left-blob.svg">
-                    <img class="sm-height-70px" src="../assets/images/learning/right-blob.svg">
+                    <g-image class="sm-height-50px" src="../assets/images/learning/left-blob.svg"/>
+                    <g-image class="sm-height-70px" src="../assets/images/learning/right-blob.svg"/>
                 </div>
             </div>
         </div>
@@ -46,16 +46,16 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/1.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/1.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/2.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/2.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img :src="require('@/assets/images/idea-hack/3.jpg')" alt="" data-no-retina="">
+                    <g-image src="~/assets/images/idea-hack/3.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/4.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/4.jpg" alt="" data-no-retina=""/>
                 </div>
             </div>
         </div>

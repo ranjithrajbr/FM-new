@@ -566,9 +566,9 @@
                     <img class="sm-margin-lr-auto" style="height: 100px;" src="../assets/images/test.svg" />
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <h7 class="sm-margin-two-tb text-center text-extra-dark-gray light-font">We are here to <b>ideate, create</b> and <b>operate</b> for
+                    <p class="sm-margin-two-tb text-center text-extra-dark-gray light-font">We are here to <b>ideate, create</b> and <b>operate</b> for
                         you.
-                    </h7>
+                    </p>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-end">
                     <a href="contact.html" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
@@ -583,14 +583,12 @@
 <script>
   import results from '@/data/events.json'
 export default {
+    name:'Index',
   data(){
     return{
         results
     }
   },
-  metaInfo: {
-    title: 'Hello, world!'
-  }
 }
 </script>
 

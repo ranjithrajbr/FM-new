@@ -21,16 +21,20 @@ import '~/assets/css/themify-icons.css'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
-  
-  Vue.use(VueMeta, {
+   Vue.use(VueMeta, {
   // optional pluginOptions
   refreshOnceOnNavigation: true
 })
+ 
   head.meta.push({
     name: 'keywords',
     content: 'Consultancy, Entrepreneurship, Entrepreneur, Innovation, Startup, Launchpad, Business, Business Idea, Workshop, Ideathon, Hackathon, Skills, become an entrepreneur, start a business, business consultants, branding service, marketing, learn about digital marketing, how to increase sales, business strategy, how to increase Instagram followers, learn to run a business, execution, funding, investment'
   })
-}
+  head.meta.push({
+    name: 'description',
+    content: 'First Main is an innovation scout and support aggregator that aims at building an entrepreneurial ecosystem, where every member mutually benefits one another.'
+  })
+
 
 
   
