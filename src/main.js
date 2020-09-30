@@ -34,7 +34,10 @@ export default function (Vue, { router, head, isClient }) {
     name: 'description',
     content: 'First Main is an innovation scout and support aggregator that aims at building an entrepreneurial ecosystem, where every member mutually benefits one another.'
   })
-
+head.script.push({
+    src:'../assets/js/hello.js',
+    body: true
+  })
 
 
   

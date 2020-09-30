@@ -38,7 +38,7 @@
                      >Business Development + Curations + Strategies</span
                      >
                   <a
-                     href="spring.html"
+                     href="spring"
                      class="btn btn-white btn-medium margin-20px-top sm-no-margin-top"
                      >Spring Diaries</a
                      >
@@ -60,7 +60,7 @@
                      >Branding + Identity + Curations</span
                      >
                   <a
-                     href="ichange.html"
+                     href="ichange"
                      class="btn btn-white btn-medium margin-20px-top sm-no-margin-top wow"
                      >I Change Indiranagar</a
                      >
@@ -82,7 +82,7 @@
                      >Branding + Identity</span
                      >
                   <a
-                     href="area83.html"
+                     href="area"
                      class="btn btn-white btn-medium margin-20px-top sm-no-margin-top wow"
                      >Area 83</a
                      >
@@ -104,7 +104,7 @@
                      >Business Development + Curations + Strategies</span
                      >
                   <a
-                     href="ponnappa.html"
+                     href="ponnappa"
                      class="btn btn-white btn-medium margin-20px-top sm-no-margin-top wow"
                      >Shradha Ponappa</a
                      >
@@ -126,7 +126,7 @@
                      >Business Development + Outreach</span
                      >
                   <a
-                     href="ideotic.html"
+                     href="ideotic"
                      class="btn btn-dark-gray btn-medium margin-20px-top sm-no-margin-top wow"
                      >Ideotic</a
                      >
@@ -148,7 +148,7 @@
                      >Ideation + Branding + Identity</span
                      >
                   <a
-                     href="xioki.html"
+                     href="xioki"
                      class="btn btn-white btn-medium margin-20px-top sm-no-margin-top wow"
                      >Xioki</a
                      >
@@ -405,7 +405,7 @@
                </div>
                <div class="col-md-4 d-flex align-items-center justify-content-end">
                   <a
-                     href="contact.html"
+                     href="contact"
                      class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto"
                      >Contact us</a
                      >

@@ -50,7 +50,7 @@
                 <div class="width-45 text-left">
                     <div class="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
                         <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous Project</span>
-                        <a href="idea-hack.html">
+                        <a href="Ideathon">
                             <i class="ti-arrow-left blog-nav-icon"></i>
                            Ideathon + Hackathon
                         </a>
@@ -59,7 +59,7 @@
                 <div class="width-45 text-right">
                     <div class="blog-nav-link blog-nav-link-next text-extra-dark-gray">
                         <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next Project</span>
-                        <a href="greenside.html">
+                        <a href="greenside">
                             <i class="ti-arrow-right blog-nav-icon"></i>
                            The Greener Side
                         </a>
@@ -74,7 +74,7 @@
                     <h7 class="sm-margin-two-tb sm-text-center text-extra-dark-gray light-font">We are here to <b>ideate, create</b> and <b>operate</b> for you.</h7>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center ">
-                    <a href="contact.html" class="btn margin-15px-bottom btn-medium btn-rounded btn-transparent-dark-gray">Contact us</a>
+                    <a href="contact" class="btn margin-15px-bottom btn-medium btn-rounded btn-transparent-dark-gray">Contact us</a>
                 </div>
             </div>
         </div>

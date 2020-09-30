@@ -139,8 +139,8 @@
                 </div>
             </div>
         </div>
-        <img class="blob-about-fix position-absolute l-chakra" src="../assets/images/about/chakra.svg" />
-        <img class="blob-about-fix position-absolute chakra" src="../assets/images/about/l-chakra.svg" />
+        <g-image class="blob-about-fix position-absolute l-chakra" src="../assets/images/about/chakra.svg" />
+        <g-image class="blob-about-fix position-absolute chakra" src="../assets/images/about/l-chakra.svg" />
     </section>
     <!--mission-vision-end -->
     <section class="wow">
@@ -161,7 +161,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom ">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/razi.png" alt="" />
+                            <g-image src="../assets/images/about/razi.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/raziabbasm/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -184,7 +184,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/arjun.png" alt="" />
+                            <g-image src="../assets/images/about/arjun.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/arjun-chaddha-73994b169/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -207,7 +207,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/nischal.png" alt="" />
+                            <g-image src="../assets/images/about/nischal.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/nishchal-jain-710288177/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -230,7 +230,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/sargam.png" alt="" />
+                            <g-image src="../assets/images/about/sargam.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/sargam-garg-043494134/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -253,7 +253,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/soumya.png" alt="" />
+                            <g-image src="../assets/images/about/soumya.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/soumyabhasin/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -276,7 +276,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/Malvika.png" alt="" />
+                            <g-image src="../assets/images/about/Malvika.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/malvika-ramesh-4795a826/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -299,7 +299,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom ">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/sinan.png" alt="" />
+                            <g-image src="../assets/images/about/sinan.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/fakhruddin-sinan-d-ab0832125/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -322,7 +322,7 @@
                 <div class="col-12 col-md-3 team-block text-left team-style-1 sm-margin-ten-bottom">
                     <figure>
                         <div class="team-image sm-width-100">
-                            <img src="../assets/images/about/amit.png" alt="" />
+                            <g-image src="../assets/images/about/amit.png" alt="" />
                             <div class="overlay-content text-center d-flex align-items-center justify-content-center">
                                 <div class="icon-social-large">
                                     <a href="https://www.linkedin.com/in/amit-nair-960b4821/" target="_blank" class="text-white-2 text-white-2-hover"><i class="fab fa-linkedin"></i></a>
@@ -349,14 +349,14 @@
         <div class="container">
             <div class="row padding-30px-top padding-10px-bottom">
                 <div class="col-md-4 col-sm-4 d-flex justify-content-start img-mob">
-                    <img class="sm-margin-lr-auto" style="height: 100px;" src="../assets/images/test.svg" />
+                    <g-image class="sm-margin-lr-auto" style="height: 100px;" src="../assets/images/test.svg" />
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center">
                     <h7 class="sm-margin-two-tb text-center text-extra-dark-gray light-font">We are here to <b>ideate, create</b> and <b>operate</b> for
                         you.</h7>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-end">
-                    <a href="contact.html" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
+                    <g-link to="/contact" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</g-link>
                 </div>
             </div>
         </div>

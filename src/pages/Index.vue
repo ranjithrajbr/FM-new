@@ -24,13 +24,13 @@
                     <div  class="row">
                         <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="(result,index) in results">
                             <a>
-                                <img class="home-cards" :src="require(`../assets/images/home-card/${result.image}`)">
+                                <g-image class="home-cards" :src="require(`../assets/images/home-card/${result.image}`)"/>
                             </a>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-lg-12 col-md-12 d-flex justify-content-center padding-20px-bottom">
-                            <a class="btn btn-large btn-yellow border-white text-extra-dark-gray border-radius-4 sm-margin-lr-auto d-table d-lg-inline-block" href="learning.html"><b>Click</b> to check out all our <b>workshops!</b></a>
+                            <a class="btn btn-large btn-yellow border-white text-extra-dark-gray border-radius-4 sm-margin-lr-auto d-table d-lg-inline-block" href="learning"><b>Click</b> to check out all our <b>workshops!</b></a>
                         </div>
                     </div>
                     <div class="row justify-content-center mob-d-none">
@@ -115,7 +115,7 @@
                                 You definitely have it in you to be an entrepreneur. All you
                                 need is experiential learning under startup guides.
                             </p>
-                            <a class="btn btn-medium sm-margin-lr-auto btn-fm border-radius-4 d-table d-lg-inline-block" href="learning.html">Kickstart My Journey</a>
+                            <a class="btn btn-medium sm-margin-lr-auto btn-fm border-radius-4 d-table d-lg-inline-block" href="learning">Kickstart My Journey</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                             <p class="light-font text-extra-dark-gray">
                                 The next is to find the right journey for your venture; one that will lead you closer to your vision.
                             </p>
-                            <a class="btn btn-medium sm-margin-lr-auto btn-fm border-radius-4 d-table d-lg-inline-block" href="services.html">The Next</a>
+                            <a class="btn btn-medium sm-margin-lr-auto btn-fm border-radius-4 d-table d-lg-inline-block" href="services">The Next</a>
                         </div>
                     </div>
                 </div>
@@ -232,8 +232,8 @@
                         can work on different ways to mitigate those gaps.
                     </p>
                     <div class="padding-10px-top">
-                        <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block d-md-inline-block sm-width-80" href="contact-brain.html">Discuss it</a>
-                        <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block d-md-inline-block sm-width-50" href="evaluate.html">Evaluate it</a>
+                        <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block d-md-inline-block sm-width-80" href="contact-b">Discuss it</a>
+                        <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block d-md-inline-block sm-width-50" href="evaluate">Evaluate it</a>
                     </div>
                 </div>
             </div>
@@ -250,7 +250,7 @@
                         successfully.
                     </p>
                     <div class="padding-10px-top">
-                        <a class="btn btn-medium btn-fm border-radius-4 d-table d-lg-inline-block md-margin-lr-auto" href="portfolio.html">Our works</a>
+                        <a class="btn btn-medium btn-fm border-radius-4 d-table d-lg-inline-block md-margin-lr-auto" href="portfolio">Our works</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 p-0">
@@ -571,7 +571,7 @@
                     </p>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-end">
-                    <a href="contact.html" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
+                    <a href="contact" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
                 </div>
             </div>
         </div>
@@ -593,7 +593,5 @@ export default {
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
+
 </style>

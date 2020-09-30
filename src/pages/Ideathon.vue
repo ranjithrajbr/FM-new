@@ -32,8 +32,8 @@
             <!--end-project-info-->
             <div class="row justify-content-center">
                 <div class="d-flex width-90 spring-first-blob position-absolute justify-content-between align-items-end">
-                    <img class="sm-height-50px" src="../assets/images/learning/left-blob.svg">
-                    <img class="sm-height-70px" src="../assets/images/learning/right-blob.svg">
+                    <g-image class="sm-height-50px" src="../assets/images/learning/left-blob.svg"/>
+                    <g-image class="sm-height-70px" src="../assets/images/learning/right-blob.svg"/>
                 </div>
             </div>
         </div>
@@ -44,16 +44,16 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center  overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/one.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/one.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center  overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/two.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/two.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center  overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/three.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/three.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center  overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/idea-hack/four.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/idea-hack/four.jpg" alt="" data-no-retina=""/>
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
                     <h7 class="sm-margin-two-tb sm-text-center text-extra-dark-gray light-font">We are here to <b>ideate, create</b> and <b>operate</b> for you.</h7>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center ">
-                    <a href="contact.html" class="btn margin-15px-bottom btn-medium btn-rounded btn-transparent-dark-gray">Contact us</a>
+                    <a href="contact" class="btn margin-15px-bottom btn-medium btn-rounded btn-transparent-dark-gray">Contact us</a>
                 </div>
             </div>
         </div>

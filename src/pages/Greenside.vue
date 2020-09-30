@@ -57,16 +57,16 @@
         <div class="container">
             <div class="row justify-content-center">
                  <div class="col-12 text-center  overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/past-event/4.png" alt="" data-no-retina="">
+                    <g-image src="../assets/images/past-event/4.png" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/past-event/1.png" alt="" data-no-retina="">
+                    <g-image src="../assets/images/past-event/1.png" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center  overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/green/snoop.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/green/snoop.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/green/band.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/green/band.jpg" alt="" data-no-retina=""/>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                 <div class="width-45 text-left">
                     <div class="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
                         <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous Project</span>
-                        <a href="pre-incub.html">
+                        <a href="Incubator">
                             <i class="ti-arrow-left blog-nav-icon"></i>
                             Pre-Incubator Program
                         </a>
@@ -88,7 +88,7 @@
                 <div class="width-45 text-right">
                     <div class="blog-nav-link blog-nav-link-next text-extra-dark-gray">
                         <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next Project</span>
-                        <a href="fm-workshop.html">
+                        <a href="Workshop">
                             <i class="ti-arrow-right blog-nav-icon"></i>
                            First Main Workshops
                         </a>
@@ -103,7 +103,7 @@
                     <h7 class="sm-margin-two-tb sm-text-center light-font text-extra-dark-gray">We are here to <b>ideate, create</b> and <b>operate</b> for you.</h7>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center ">
-                    <a href="contact.html" class="btn margin-15px-bottom btn-medium btn-rounded btn-transparent-dark-gray">Contact us</a>
+                    <a href="contact" class="btn margin-15px-bottom btn-medium btn-rounded btn-transparent-dark-gray">Contact us</a>
                 </div>
             </div>
         </div>

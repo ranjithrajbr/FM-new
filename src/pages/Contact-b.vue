@@ -12,7 +12,7 @@
                 <div class="col-lg-2 col-md-4">
                     <div class="d-flex justify-content-lg-center">
                         <div class="blog-nav-link blog-nav-link-prev ">
-                            <a class="light-font" href="index.html"><i class="ti-arrow-left blog-nav-icon"></i>Home</a>
+                            <a class="light-font" href="/"><i class="ti-arrow-left blog-nav-icon"></i>Home</a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <img class="contact-brain-image" src=../assets/images/index/discuss.svg>
+        <img class="contact-brain-image" src="../assets/images/index/discuss.svg">
         <div class="col-12 sm-h-100px">
         </div>
     </section>

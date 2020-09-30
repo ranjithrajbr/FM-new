@@ -9,7 +9,7 @@
                 <div class="col-lg-2 col-md-4">
                     <div class="d-flex justify-content-lg-center">
                         <div class="blog-nav-link blog-nav-link-prev ">
-                            <a class="light-font" href="contact.html"><i class="ti-arrow-left blog-nav-icon"></i>Contact us</a>
+                            <a class="light-font" href="contact"><i class="ti-arrow-left blog-nav-icon"></i>Contact us</a>
                         </div>
                     </div>
                 </div>

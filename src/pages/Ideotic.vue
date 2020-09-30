@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		 <div class="sm-height-200px height-500px background-image position-absolute single-port">
-            <img src="../assets/images/xoiki/test-banner.png">
+            <g-image src="../assets/images/xoiki/test-banner.png"/>
     </div>
     <!-- start page title section -->
     <section class="wow  sm-padding-60px-top position-relative no-padding-bottom">
@@ -9,7 +9,7 @@
             <!--banner-image-->
             <div class="row justify-content-center">
                 <div class="col-12 text-center height-500px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/ideotic/ideotic.png" alt="" data-no-retina="">
+                    <g-image src="../assets/images/ideotic/ideotic.png" alt="" data-no-retina=""/>
                 </div>
             </div>
             <!--end- banner-image-->
@@ -38,10 +38,10 @@
             <!--image-one and two-->
             <div class="row justify-content-center">
                 <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/ideotic/sd.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/ideotic/sd.jpg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/ideotic/footsapp.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/ideotic/footsapp.jpg" alt="" data-no-retina=""/>
                 </div>
             </div>
             <!--end-image-one and two-->
@@ -60,7 +60,7 @@
                     <span class="text-uppercase d-block project-font text-small margin-5px-top">Founder/ceo, Ideotic</span>
                 </div>
                 <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/ideotic/peach.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/ideotic/peach.jpg" alt="" data-no-retina=""/>
                 </div>
             </div>
             <div class="row justify-content-center padding-50px-tb">

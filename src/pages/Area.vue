@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="sm-height-200px height-500px background-image position-absolute single-port">
-            <img src="../assets/images/xoiki/test-banner.png">
+            <g-image src="../assets/images/xoiki/test-banner.png"/>
         </div>
         <!-- start page title section -->
         <section class="wow  sm-padding-60px-top position-relative no-padding-bottom">
@@ -9,7 +9,7 @@
                 <!--banner-image-->
                 <div class="row justify-content-center">
                     <div class="col-12 text-center height-500px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                        <img src="../assets/images/area83/area-1.jpeg" alt="" data-no-retina="">
+                        <g-image src="../assets/images/area83/area-1.jpeg" alt="" data-no-retina=""/>
                     </div>
                 </div>
                 <!--end- banner-image-->
@@ -41,10 +41,10 @@
                 <!--image-one and two-->
                 <div class="row justify-content-center">
                     <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                        <img src="../assets/images/area83/area-2.jpeg" alt="" data-no-retina="">
+                        <g-image src="../assets/images/area83/area-2.jpeg" alt="" data-no-retina=""/>
                     </div>
                     <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                        <img src="../assets/images/area83/area-3.jpeg" alt="" data-no-retina="">
+                        <g-image src="../assets/images/area83/area-3.jpeg" alt="" data-no-retina=""/>
                     </div>
                 </div>
                 <!--end-image-one and two-->
@@ -62,7 +62,7 @@
                         <span class="text-uppercase d-block text-small project-font margin-5px-top">Director, Area 83</span>
                     </div>
                     <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                        <img src="../assets/images/area83/area-4.jpeg" alt="" data-no-retina="">
+                        <g-image src="../assets/images/area83/area-4.jpeg" alt="" data-no-retina=""/>
                     </div>
                 </div>
                 <div class="row justify-content-center padding-50px-tb">
@@ -99,7 +99,7 @@
                                 <div class="swiper-slide grid-item swiper-slide-prev">
                                     <a href="xioki.html">
                                         <figure>
-                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/xoiki/xioki_1.jpg" alt="" data-no-retina=""></div>
+                                            <div class="portfolio-img bg-extra-dark-gray"><g-image src="../assets/images/xoiki/xioki_1.jpg" alt="" data-no-retina=""/></div>
                                             <figcaption class="d-flex justify-content-center align-items-center text-center">
                                                 <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
                                                     <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Xioki</span>
@@ -114,7 +114,7 @@
                                 <div class="swiper-slide grid-item swiper-slide-active">
                                     <a href="ideotic.html">
                                         <figure>
-                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/ideotic/peach.jpg" alt="" data-no-retina=""></div>
+                                            <div class="portfolio-img bg-extra-dark-gray"><g-image src="../assets/images/ideotic/peach.jpg" alt="" data-no-retina=""/></div>
                                             <figcaption class="d-flex justify-content-center align-items-center text-center">
                                                 <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
                                                     <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Ideotic</span>
@@ -129,7 +129,7 @@
                                 <div class="swiper-slide grid-item swiper-slide-next">
                                     <a href="ponnappa.html">
                                         <figure>
-                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/ponnappa/2.jpg" alt="" data-no-retina=""></div>
+                                            <div class="portfolio-img bg-extra-dark-gray"><g-image src="../assets/images/ponnappa/2.jpg" alt="" data-no-retina=""/></div>
                                             <figcaption class="d-flex justify-content-center align-items-center text-center">
                                                 <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
                                                     <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Shradha Ponnappa</span>
@@ -144,7 +144,7 @@
                                 <div class="swiper-slide grid-item">
                                     <a href="area83.html">
                                         <figure>
-                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/area83/area-3.jpeg" alt="" data-no-retina=""></div>
+                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/area83/area-3.jpeg" alt="" data-no-retina=""/></div>
                                             <figcaption class="d-flex justify-content-center align-items-center text-center">
                                                 <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
                                                     <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Area 83</span>
@@ -159,7 +159,7 @@
                                 <div class="swiper-slide grid-item">
                                     <a href="ichange.html">
                                         <figure>
-                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/i-ch-ind/5.jpeg" alt="" data-no-retina=""></div>
+                                            <div class="portfolio-img bg-extra-dark-gray"><g-image src="../assets/images/i-ch-ind/5.jpeg" alt="" data-no-retina=""/></div>
                                             <figcaption class="d-flex justify-content-center align-items-center text-center">
                                                 <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
                                                     <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">I Change Indiranagar</span>
@@ -174,7 +174,7 @@
                                 <div class="swiper-slide grid-item">
                                     <a href="spring.html">
                                         <figure>
-                                            <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/spring/spring-3.png" alt="" data-no-retina=""></div>
+                                            <div class="portfolio-img bg-extra-dark-gray"><g-image src="../assets/images/spring/spring-3.png" alt="" data-no-retina=""/></div>
                                             <figcaption class="d-flex justify-content-center align-items-center text-center">
                                                 <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
                                                     <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Spring Diaries</span>

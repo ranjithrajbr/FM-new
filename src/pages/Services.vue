@@ -24,7 +24,7 @@
                <!-- start feature box item-->
                <div class="col-12 col-xl-4 col-md-6 sm-margin-30px-bottom">
                   <div class="feature-box-5 position-relative">
-                     <img class="icon-fix icon-mob w-40-h-40" src="../assets/../assets/images/fm/auction.svg" />
+                     <img class="icon-fix icon-mob w-40-h-40" src="../assets/images/fm/auction.svg" />
                      <div class="feature-content">
                         <div class="text-extra-dark-gray margin-10px-bottom alt-font">
                            Incorporation
@@ -248,7 +248,7 @@
                         </ul>
                         <!-- start pricing action -->
                         <div class="pricing-action padding-40px-top md-no-margin-top sm-no-padding-top">
-                           <a href="contact.html" class="btn btn-black btn-small text-extra-small border-radius-4">Choose Plan</a>
+                           <a href="contact" class="btn btn-black btn-small text-extra-small border-radius-4">Choose Plan</a>
                         </div>
                         <!-- end pricing action -->
                      </div>
@@ -274,7 +274,7 @@
                         </ul>
                         <!-- start pricing action -->
                         <div class="pricing-action md-no-margin-top padding-40px-top sm-no-padding-top">
-                           <a href="contact.html" class="btn btn-black border-radius-4 btn-small text-extra-small">Choose Plan</a>
+                           <a href="contact" class="btn btn-black border-radius-4 btn-small text-extra-small">Choose Plan</a>
                         </div>
                         <!-- end pricing action -->
                      </div>
@@ -302,7 +302,7 @@
                         </ul>
                         <!-- start pricing action -->
                         <div class="pricing-action md-no-margin-top">
-                           <a href="contact.html" class="btn btn-black btn-small text-extra-small border-radius-4">Choose Plan</a>
+                           <a href="contact" class="btn btn-black btn-small text-extra-small border-radius-4">Choose Plan</a>
                         </div>
                         <!-- end pricing action -->
                      </div>
@@ -329,7 +329,7 @@
                         </ul>
                         <!-- start pricing action -->
                         <div class="pricing-action md-no-margin-top">
-                           <a href="contact.html" class="btn border-radius-4 btn-black btn-small text-extra-small">Choose Plan</a>
+                           <a href="contact" class="btn border-radius-4 btn-black btn-small text-extra-small">Choose Plan</a>
                         </div>
                         <!-- end pricing action -->
                      </div>
@@ -355,8 +355,8 @@
                      evaluate your business and find out what services you require.
                   </p>
                   <div class="padding-10px-top">
-                     <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block md-margin-lr-auto" href="contact.html">Ask for Quote</a>
-                     <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block md-margin-lr-auto" href="evaluate.html">Evaluate First</a>
+                     <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block md-margin-lr-auto" href="contact">Ask for Quote</a>
+                     <a class="btn btn-medium btn-fm margin-15px-all border-radius-4 d-table d-lg-inline-block md-margin-lr-auto" href="evaluate">Evaluate First</a>
                   </div>
                </div>
             </div>
@@ -370,7 +370,7 @@
                   </h7>
                </div>
                <div class="col-md-4 d-flex align-items-center justify-content-end">
-                  <a href="contact.html" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
+                  <a href="contact" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
                </div>
             </div>
          </div>

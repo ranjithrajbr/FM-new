@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<div class="sm-height-200px height-500px background-image position-absolute single-port">
-        <img src="../assets/images/xoiki/test-banner.png">
+        <g-image src="../assets/images/xoiki/test-banner.png"/>
     </div>
     <!-- start page title section -->
     <section class="sm-padding-60px-top position-relative no-padding-bottom">
@@ -9,7 +9,7 @@
             <!--banner-image-->
             <div class="row justify-content-center">
                 <div class="col-12 text-center height-500px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/spring/spring-banner.jpg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/spring/spring-banner.jpg" alt="" data-no-retina=""/>
                 </div>
             </div>
             <!--end- banner-image-->
@@ -40,10 +40,10 @@
             <!--image-one and two-->
             <div class="row justify-content-center">
                 <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/spring/spring-2.png" alt="" data-no-retina="">
+                    <g-image src="../assets/images/spring/spring-2.png" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/spring/spring-3.png" alt="" data-no-retina="">
+                    <g-image src="../assets/images/spring/spring-3.png" alt="" data-no-retina=""/>
                 </div>
             </div>
             <!--end-image-one and two-->
@@ -61,7 +61,7 @@
                     <span class="text-uppercase project-font d-block text-small margin-5px-top">co-Founder, spring diaries</span>
                 </div>
                 <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/spring/spring-4.jpeg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/spring/spring-4.jpeg" alt="" data-no-retina=""/>
                 </div>
             </div>
         </div>

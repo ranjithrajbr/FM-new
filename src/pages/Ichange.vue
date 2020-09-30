@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<div class="sm-height-200px height-500px background-image position-absolute single-port">
-        <img src="../assets/images/xoiki/test-banner.png">
+        <g-image src="../assets/images/xoiki/test-banner.png"/>
     </div>
     <!-- start page title section -->
     <section class="wow  sm-padding-60px-top position-relative no-padding-bottom">
@@ -9,7 +9,7 @@
             <!--banner-image-->
             <div class="row justify-content-center">
                 <div class="col-12 text-center height-500px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/i-ch-ind/1.jpeg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/i-ch-ind/1.jpeg" alt="" data-no-retina=""/>
                 </div>
             </div>
             <!--end- banner-image-->
@@ -40,10 +40,10 @@
             <!--image-one and two-->
             <div class="row justify-content-center">
                 <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/i-ch-ind/2.jpeg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/i-ch-ind/2.jpeg" alt="" data-no-retina=""/>
                 </div>
                 <div class="col-12 text-center overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/i-ch-ind/3.jpeg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/i-ch-ind/3.jpeg" alt="" data-no-retina=""/>
                 </div>
             </div>
             <!--end-image-one and two-->
@@ -61,7 +61,7 @@
                     <span class="text-uppercase d-block text-small project-font margin-5px-top">Member of ICIN </span>
                 </div>
                 <div class="col-12 text-center height-650px overflow-hidden lg-height-auto md-bottom--minus50 lg-position-relative wow  sm-bottom-0">
-                    <img src="../assets/images/i-ch-ind/4.jpeg" alt="" data-no-retina="">
+                    <g-image src="../assets/images/i-ch-ind/4.jpeg" alt="" data-no-retina=""/>
                 </div>
             </div>
         </div>
@@ -145,10 +145,10 @@
         <div class="conatiner">
             <div class="row p-0">
                 <div class="col-lg-6 col-sm-6 p-0">
-                    <img src="../assets/images/i-ch-ind/5.jpeg">
+                    <g-image src="../assets/images/i-ch-ind/5.jpeg"/>
                 </div>
                 <div class="col-lg-6 col-sm-6 p-0">
-                    <img src="../assets/images/i-ch-ind/6.jpeg">
+                    <g-image src="../assets/images/i-ch-ind/6.jpeg"/>
                 </div>
             </div>
             <div class="row justify-content-center padding-50px-top">

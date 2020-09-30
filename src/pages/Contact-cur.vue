@@ -9,7 +9,7 @@
                     <div class="col-lg-2 col-md-4">
                         <div class="d-flex justify-content-md-center">
                             <div class="blog-nav-link blog-nav-link-prev ">
-                                <a class="light-font" href="learning.html"><i class="ti-arrow-left blog-nav-icon"></i>E-Learning</a>
+                                <a class="light-font" href="learning"><i class="ti-arrow-left blog-nav-icon"></i>E-Learning</a>
                             </div>
                         </div>
                     </div>

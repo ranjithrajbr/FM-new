@@ -30,16 +30,16 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-sm-2 col-lg-3 col-md-3 margin-five-tb d-flex flex-column align-items-center justify-content-center">
-                    <img src="../assets/images/evaluate/lucid.png">
+                    <g-image src="../assets/images/evaluate/lucid.png"/>
                 </div>
                 <div class="col-sm-2 col-lg-3 col-md-3 d-flex margin-five-tb flex-column align-items-center justify-content-center">
-                    <img src="../assets/images/evaluate/spring.png">
+                    <g-image src="../assets/images/evaluate/spring.png"/>
                 </div>
                 <div class="col-sm-2 col-lg-3 col-md-3 d-flex margin-five-tb flex-column align-items-center justify-content-center">
-                    <img src="../assets/images/evaluate/shradha.png">
+                    <g-image src="../assets/images/evaluate/shradha.png"/>
                 </div>
                 <div class="col-sm-2 col-lg-3 col-md-3 d-flex margin-five-tb flex-column align-items-center justify-content-center">
-                    <img src="../assets/images/evaluate/high.png">
+                    <g-image src="../assets/images/evaluate/high.png"/>
                 </div>
             </div>
         </div>
@@ -226,7 +226,7 @@
                     <h7 class="sm-margin-two-tb text-center light-font text-extra-dark-gray">We are here to <b>ideate, create</b> and <b>operate</b> for you.</h7>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-end ">
-                    <a href="contact.html" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
+                    <a href="contact" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
                 </div>
             </div>
         </div>

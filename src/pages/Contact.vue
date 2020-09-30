@@ -17,9 +17,9 @@
                     <span class="margin-30px-bottom font-weight-300 md-width-80 sm-width-100 text-medium text-white d-block">There are multiple reasons for us to build a relationship! Let’s
                         find one, together!</span>
                     <div>
-                        <a href="contact-partner.html" role="button" class="btn margin-10px-right border-radius-4 btn-transparent-white btn-small sm-width-60 md-margin-lr-auto d-lg-inline-block lg-margin-15px-bottom">Partner with us</a>
-                        <a href="contact-coll.html" role="button" class="btn margin-10px-lr border-radius-4 btn-transparent-white sm-width-60 btn-small md-margin-lr-auto d-lg-inline-block lg-margin-15px-bottom">Collaborate with us</a>
-                        <a href="contact-cont.html" role="button" class="btn margin-10px-lr btn-transparent-white border-radius-4 sm-width-60 btn-small md-margin-lr-auto d-lg-inline-block lg-margin-15px-bottom">Contribute to Stack</a>
+                        <g-link to="/contact-part" role="button" class="btn margin-10px-right border-radius-4 btn-transparent-white btn-small sm-width-60 md-margin-lr-auto d-lg-inline-block lg-margin-15px-bottom">Partner with us</g-link>
+                        <a href="contact-coll" role="button" class="btn margin-10px-lr border-radius-4 btn-transparent-white sm-width-60 btn-small md-margin-lr-auto d-lg-inline-block lg-margin-15px-bottom">Collaborate with us</a>
+                        <a href="contact-cont" role="button" class="btn margin-10px-lr btn-transparent-white border-radius-4 sm-width-60 btn-small md-margin-lr-auto d-lg-inline-block lg-margin-15px-bottom">Contribute to Stack</a>
                     </div>
                 </div>
             </div>

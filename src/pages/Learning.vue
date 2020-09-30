@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <section class="bg-position-center-right-mob padding-60px-bottom position-relative  background-size-cover" :style="{
-			backgroundImage:'url('+require('../assets/images/learning/banner.svg')+')',
+			backgroundImage:'url('+require('../assets/images/learning/banner-learn.svg')+')',
 			backgroundColor:'#0865AB',
 			backgroundPosition:'bottom 0px left 130px',
 			backgroundSize:'cover',
@@ -276,7 +276,7 @@
                                 <!-- end portfolio item -->
                                 <!-- start  portfolio-item item -->
                                 <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="idea-hack.html">
+                                    <a href="Ideathon">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/idea-hack.jpg" alt="" />
                                                 <div class="position-absolute title-top title-vanish">
@@ -301,7 +301,7 @@
                                 <!-- end portfolio item -->
                                 <!-- start  portfolio-item item -->
                                 <li class="grid-item web branding design  last-paragraph-no-margin">
-                                    <a href="pre-incub.html">
+                                    <a href="Incubator">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/pre-incub.jpg" alt="">
                                                 <div class="position-absolute title-top title-vanish">
@@ -414,7 +414,7 @@
                     <div class="col-12 col-lg-6 col-md-10 text-center">
                         <h5 class="alt-font  text-extra-dark-gray width-80 mx-auto margin-35px-bottom lg-width-100 wow Up">Do you want to curate an experience with us?</h5>
                         <div class="btn-dual">
-                            <a href="contact-curate.html" role="button" class="btn btn-fm border-radius-4 btn-medium  lg-margin-15px-bottom">Yes, I do!</a>
+                            <a href="contact-cur" role="button" class="btn btn-fm border-radius-4 btn-medium  lg-margin-15px-bottom">Yes, I do!</a>
                         </div>
                     </div>
                 </div>
@@ -426,7 +426,7 @@
                         <h7 class="sm-margin-two-tb text-center light-font text-extra-dark-gray">We are here to <b>ideate, create</b> and <b>operate</b> for you.</h7>
                     </div>
                     <div class="col-md-4 d-flex align-items-center justify-content-end ">
-                        <a href="contact.html" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
+                        <a href="contact" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
                     </div>
                 </div>
             </div>
