@@ -1,12 +1,11 @@
 <template>
-	<Layout>
 		<header>
     <nav class="navbar navbar-default bootsnav  header-light navbar-top navbar-expand-lg on no-full">
         <div class="container-fluid nav-header-container padding-50px-lr">
             <!-- start logo -->
             <div class="col-auto pl-0">
-                <a href="index.html">
-                    <img src="images/logo/logo-dark.svg">
+                <a href="/">
+                    <img src="../assets/images/logo/logo-dark.svg">
                 </a>
             </div>
             <!-- end logo -->
@@ -50,7 +49,6 @@
         </div>
     </nav>
 </header>
-	</Layout>
 </template>
 
 <script>

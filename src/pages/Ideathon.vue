@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout :theme="theme">
 	 <section class="wow position-relative  sm-padding-100px-top bg-light-gray">
         <div class="container">
             <div class="row justify-content-center">
@@ -66,7 +66,7 @@
                 <div class="width-45 text-left">
                     <div class="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
                         <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous Project</span>
-                        <a href="fm-workshop.html">
+                        <a href="/Workshop">
                             <i class="ti-arrow-left blog-nav-icon"></i>
                             First Main Workshops
                         </a>
@@ -75,7 +75,7 @@
                 <div class="width-45 text-right">
                     <div class="blog-nav-link blog-nav-link-next text-extra-dark-gray">
                         <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next Project</span>
-                        <a href="pre-incub.html">
+                        <a href="Incubator">
                             <i class="ti-arrow-right blog-nav-icon"></i>
                           Pre-incubator Program
                         </a>
@@ -105,7 +105,7 @@ export default {
 
   data () {
     return {
-
+            theme:true
     }
   }
 }

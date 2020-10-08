@@ -1,6 +1,22 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import VueMeta from 'vue-meta'
+import Vue from "vue";
+import { ValidationObserver, ValidationProvider, extend, localize } from 'vee-validate';
+import en from 'vee-validate/dist/locale/en.json';
+import * as rules from 'vee-validate/dist/rules';
+import App from "./App.vue";
+
+// install rules and localization
+Object.keys(rules).forEach(rule => {
+  extend(rule, rules[rule]);
+});
+
+localize('en', en);
+
+// Install components globally
+Vue.component('ValidationObserver', ValidationObserver);
+Vue.component('ValidationProvider', ValidationProvider);
 
 
 
@@ -19,8 +35,10 @@ import '~/assets/css/test.css'
 import '~/assets/css/themify-icons.css'
 
 
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
+
    Vue.use(VueMeta, {
   // optional pluginOptions
   refreshOnceOnNavigation: true
@@ -34,8 +52,13 @@ export default function (Vue, { router, head, isClient }) {
     name: 'description',
     content: 'First Main is an innovation scout and support aggregator that aims at building an entrepreneurial ecosystem, where every member mutually benefits one another.'
   })
+
+// head.script.push({
+//     src:'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js',
+//     body: true
+//   })
 head.script.push({
-    src:'../assets/js/hello.js',
+    src:'/assets/js/hello.js',
     body: true
   })
 

@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout :theme="theme">
 		<section class="bg-position-contact-partner-mob md-no-padding-bottom padding-30px-bottom  background-size-cover" :style="{backgroundImage:'url('+require('../assets/images/contact/banner.svg')+')',
 		backgroundColor:'#f8f9fa',
 		backgroundPosition:'bottom 0px left 130px',
@@ -78,7 +78,7 @@ export default {
 
   data () {
     return {
-
+            theme:true
     }
   }
 }

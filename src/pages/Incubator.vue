@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout :theme="theme">
 		 <section class="wow position-relative  sm-padding-100px-top bg-light-gray">
         <div class="container">
             <div class="row justify-content-center">
@@ -89,7 +89,7 @@ export default {
 
   data () {
     return {
-
+        theme:true
     }
   }
 }

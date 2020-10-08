@@ -1,5 +1,5 @@
 <template>
-    <Layout>
+    <Layout :theme="theme">
         <section class="bg-position-contact-curate-mob wow padding-30px-bottom  background-size-cover" :style="{backgroundImage:'url('+require('../assets/images/contact/contact-curate.svg')+')',
             backgroundColor:'#f8f9fa',
             backgroundPosition:'bottom 0px left 130px',
@@ -79,7 +79,7 @@ export default {
 
     data() {
         return {
-
+                theme:true
         }
     }
 }
