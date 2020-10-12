@@ -1,16 +1,17 @@
 <template>
-    <Layout>
+    <Layout :theme="theme">
         <section class="wow ">
             <section>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 padding-20px-bottom">
-                            <g-image class="home-cards" :src="require(`../assets/images/home-card/${$page.events.image}`)"/>
+                            <img :src="require(`../assets/images/home-card/${fdata.image}`)" />
+                         <!--    <g-image :src="`/assets/images/home-card/${fdata.image}`" /> -->
                         </div>
                         <div class="col-12 col-lg-6 col-md-6">
-                        <h3 class="text-uppercase">{{$page.events.title}}</h3>
-                        <p>{{$page.events.para1}}</p>
-                        <p>{{$page.events.para2}}</p>
+                            <h3 class="text-uppercase">{{fdata.title}}</h3>
+                            <p>{{fdata.para1}}</p>
+                            <p>{{fdata.para2}}</p>
                         </div>
                     </div>
                 </div>
@@ -28,7 +29,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Full Name:</label>
                                         <ValidationProvider rules="required|min:3" v-slot="{errors}">
-                                            <input type="text" name="Name" placeholder=" Full Name*" v-model="fullName" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input type="text" name="Name" placeholder=" Full Name*" v-model="fdata.fullName" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -36,7 +37,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Phone:</label>
                                         <ValidationProvider rules="required|digits:10" v-slot="{errors}">
-                                            <input type="number" name="Phone" placeholder="Phone*" v-model="phone" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}" />
+                                            <input type="number" name="Phone" placeholder="Phone*" v-model="fdata.phone" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}" />
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -44,7 +45,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Email:</label>
                                         <ValidationProvider rules="required|email" v-slot="{errors}">
-                                            <input type="email" name="email" v-model="email" placeholder="Email*
+                                            <input type="email" name="email" v-model="fdata.email" placeholder="Email*
                                 " :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
@@ -53,7 +54,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Age:</label>
                                         <ValidationProvider rules="required|numeric|max:3" v-slot="{errors}">
-                                            <input type="number" name="age" v-model="age" placeholder="Age*" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input type="number" name="age" v-model="fdata.age" placeholder="Age*" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -61,7 +62,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Company/Insitution Name:</label>
                                         <ValidationProvider rules="required|min:3" v-slot="{errors}">
-                                            <input type="text" name="Company/Insitution Name" placeholder="Company/Insitution Name*" v-model="companyName" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input type="text" name="Company/Insitution Name" placeholder="Company/Insitution Name*" v-model="fdata.companyName" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -69,7 +70,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Designation:</label>
                                         <ValidationProvider rules="required|min:3" v-slot="{errors}">
-                                            <input list="designations" name="designation" v-model="designation" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input list="designations" name="designation" v-model="fdata.designation" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <datalist id="designations">
                                                 <option value="Student">Student</option>
                                                 <option value="Working Professional">Working Professional</option>
@@ -81,7 +82,7 @@
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div><label>Is this your first workshop with us ?</label></div>
-                                        <select id="firstTime" v-model="firstTime">
+                                        <select id="firstTime" v-model="fdata.firstTime">
                                             <option value="Yes">Yes</option>
                                             <option value="No">No</option>
                                         </select>
@@ -89,7 +90,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>How did you hear about us?:</label>
                                         <ValidationProvider rules="required|min:3" v-slot="{errors}">
-                                            <input list="hear-about" id="referral" v-model="referral" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input list="hear-about" id="referral" v-model="fdata.referral" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <datalist id="hear-about">
                                                 <option value="Instagram">Instagram</option>
                                                 <option value="Facebook">Facebook</option>
@@ -101,22 +102,28 @@
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Referral Code(If any):</label>
-                                        <input type="text" name="referralCode" id="referralCode" placeholder="Referral Code" v-model="referralCode">
+                                        <input type="text" name="referralCode" id="referralCode" placeholder="Referral Code" v-model="fdata.referralCode">
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Event:</label>
-                                        <input type="text" name="event" id="workshop" class="input-bg">
+                                        <input type="text" name="event" id="workshop" class="input-bg" v-model="fdata.title">
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Date:</label>
-                                        <input type="text" name="date" id="date" class="input-bg">
+                                        <input type="text" name="date" id="date" class="input-bg" v-model="fdata.date">
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Time:</label>
-                                        <input type="text" name="time" id="time" class="input-bg">
+                                        <input type="text" name="time" id="time" class="input-bg" v-model="fdata.time">
                                     </div>
                                     <div class="col-12 text-center">
                                         <button type="submit" :disabled="invalid" class="btn btn-fm border-radius-4 btn-large margin-20px-top">Book now</button>
+                                    </div>
+                                    <div class=" col-12 text-center margin-20px-top alert alert-success hidden">
+                                        Thank you for registering for the workshop! An email with the details will be sent to you shortly.
+                                    </div>
+                                    <div class="col-12 text-center margin-20px-top alert alert-danger hidden">
+                                        <strong>Error!</strong> Something went wrong sending your message.
                                     </div>
                                 </div>
                             </div>
@@ -127,49 +134,52 @@
         </section>
     </Layout>
 </template>
-<page-query>
-query  {
-   events(id:"2"){
-   title
-   para1
-   para2
-   image
-  }
-}
-</page-query>
 <script>
 import results from '@/data/events.json'
+// import axios from 'axios'
 export default {
-    name: '	',
+    name: ' ',
     data() {
         return {
-      
-            fullName: '',
-            email: '',
-            phone: '',
-            referral: '',
-            referralCode: '',
-            designation: '',
-            companyName: '',
-            age: '',
-            firstTime: '',
-           result:'',
-           results,
-           eventId:''
+            theme: true,
+            fdata: {
+                fullName: '',
+                email: '',
+                phone: '',
+                referral: '',
+                referralCode: '',
+                designation: '',
+                companyName: '',
+                age: '',
+                firstTime: '',
+                title: '',
+                date: '',
+                time: '',
+                image:'',
+            },
+            results,
+            // flag:false
         }
     },
-    mounted (){
-         this.eventId = this.$route.query.id;
-         console.log(this.eventId)
-        
+    mounted() {
+        var q = this.$route.query.id
+        this.fdata.title = this.results[q].title
+        this.fdata.date = this.results[q].date
+        this.fdata.time = this.results[q].time
+        this.fdata.image = this.results[q].image
+        this.fdata.para1 = this.results[q].para1
+        this.fdata.para2 = this.results[q].para2
+        console.log(this.results[q].image)
     },
-    
-    methods:{
-    	onSubmit(){
-    		alert('sent')
-    	}
-    },
-
+    methods: {
+        onSubmit(e) {
+            axios.post('https://ei1ujyrp95.execute-api.ap-south-1.amazonaws.com/01/event', fData).then(response => {
+               alert(sent);     
+            }).catch((error)=>{
+                console.log(error)
+            })
+        }
+    }
 }
 </script>
 <style lang="css" scoped>

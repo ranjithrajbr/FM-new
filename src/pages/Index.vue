@@ -22,9 +22,14 @@
                     </div>
                     <div class="col-12 col-lg-7 col-md-12">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvents.edges" :key="edge.node.id">
+                           <!--  <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvents.edges" :key="edge.node.id">
                                 <g-link :to="`/form?id=${edge.node.id}`">
                                     <g-image class="home-cards" :src="require(`../assets/images/home-card/${edge.node.image}`)"/>
+                                </g-link>
+                            </div> -->
+                             <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="(result,index) in results" :key="index">
+                                <g-link :to="`/form?id=${index}`">
+                                    <g-image class="home-cards" :src="require(`../assets/images/home-card/${result.image}`)"/>
                                 </g-link>
                             </div>
                         </div>
@@ -578,25 +583,8 @@
         </section>
     </Layout>
 </template>
-<page-query>
-  query  {
-  allEvents(sortBy:"id", order:ASC){
-    edges {
-      node { 
-        id,
-        title,
-        date,
-        time,
-        image,
-        para1,
-        para2
-      }
-    }
-  }
-}
-</page-query>
 <script>
-import results from '@/data/test.json'
+import results from '@/data/events.json'
 export default {
     name: 'Index',
     data() {

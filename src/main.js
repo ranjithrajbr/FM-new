@@ -57,10 +57,34 @@ export default function (Vue, { router, head, isClient }) {
 //     src:'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js',
 //     body: true
 //   })
-head.script.push({
-    src:'/assets/js/hello.js',
-    body: true
-  })
+head.script.push(
+{src:'/js/jquery.js',body: true},
+{src:'js/jquery.easing.1.3.js',body: true,defer:true},
+{src:'revolution/js/jquery.themepunch.tools.min.js',body: true, defer:true},
+{src:'revolution/js/jquery.themepunch.revolution.min.js',body: true, defer:true},
+{src:'js/modernizr.js',body: true},
+{src:'js/bootstrap.bundle.js',body: true},
+{src:'js/skrollr.min.js',body: true},
+{src:'js/smooth-scroll.js',body: true, defer:true},
+{src:'js/jquery.appear.js',body: true},
+{src:'js/bootsnav.js',body: true},
+{src:'js/jquery.nav.js',body: true},
+{src:'js/page-scroll.js',body: true},
+{src:'js/swiper.min.js',body: true},
+{src:'js/jquery.count-to.js',body: true},
+{src:'js/jquery.stellar.js',body: true},
+{src:'js/jquery.magnific-popup.min.js',body: true},
+{src:'js/isotope.pkgd.min.js',body: true},
+{src:'js/classie.js',body: true},
+{src:'js/hamburger-menu.js',body: true},
+{src:'js/counter.js',body: true},
+{src:'js/jquery.fitvids.js',body: true},
+{src:'js/skill.bars.jquery.js',body: true},
+{src:'js/justified-gallery.min.js',body: true},
+{src:'js/retina.min.js',body: true},
+
+{src:'js/main.js',body: true,defer:true}
+)
 
 
   
