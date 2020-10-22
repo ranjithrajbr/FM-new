@@ -6,5 +6,14 @@
 
 module.exports = {
   siteName: '',
-  plugins: []
+  plugins: [
+  	{
+        use: 'gridsome-plugin-nprogress',
+        options: {
+          // Setting a color is optional.
+          color: '#000',
+          // Disable the loading spinner.
+        }
+    }
+  ]
 }

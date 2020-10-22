@@ -86,12 +86,15 @@
                     <span>Shradha Ponappa Boutique, Indiranagar</span>
                 </div>
             </div>
-            <div class="row justify-content-center padding-30px-bottom">
+            <div v-inview:once="startCount" class="row justify-content-center padding-30px-bottom">
                 <!-- counter box item -->
                 <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
                     <div class="feature-box-5 position-relative">
                         <div class="feature-content">
-                            <h5 class="d-inline text-extra-dark-gray light-font mb-0 timer" data-speed="2000" data-to="15">15</h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                            <h5 class="d-inline text-extra-dark-gray light-font mb-0">
+                                <countTo ref="count" :startVal='start' :endVal='bEnd' :duration='6000'></countTo>
+                            </h5>
+                             <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
                             <span class=" margin-10px-top light-font d-block text-small text-uppercase position-relative top-minus4">Brands</span>
                             <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
                         </div>
@@ -102,7 +105,9 @@
                 <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
                     <div class="feature-box-5 position-relative">
                         <div class="feature-content">
-                            <h5 class="d-inline text-extra-dark-gray light-font mb-0 timer" data-speed="2000" data-to="300">300</h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                            <h5 class="d-inline text-extra-dark-gray light-font mb-0">
+                                 <countTo ref="count1" :startVal='start' :endVal='vEnd' :duration='6000'></countTo>
+                            </h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
                             <span class=" margin-10px-top light-font d-block text-small text-uppercase position-relative top-minus4">Visitors</span>
                             <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
                         </div>
@@ -137,12 +142,14 @@
                     <span>Graphite Stories, Indiranagar</span>
                 </div>
             </div>
-            <div class="row justify-content-center padding-50px-bottom">
+            <div v-inview:once="startCount" class="row justify-content-center padding-50px-bottom">
                 <!-- counter box item -->
                 <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
                     <div class="feature-box-5 position-relative">
                         <div class="feature-content">
-                            <h5 class="d-inline text-extra-dark-gray light-font mb-0 timer" data-speed="2000" data-to="10">10</h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                            <h5 class="d-inline text-extra-dark-gray light-font mb-0">
+                                 <countTo ref="count2" :startVal='start' :endVal='b2End' :duration='6000'></countTo>
+                            </h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
                             <span class=" margin-10px-top d-block text-small light-font text-uppercase position-relative top-minus4">Brands</span>
                             <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
                         </div>
@@ -153,7 +160,9 @@
                 <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
                     <div class="feature-box-5 position-relative">
                         <div class="feature-content">
-                            <h5 class="d-inline text-extra-dark-gray light-font mb-0 timer" data-speed="2000" data-to="100">100</h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                            <h5 class="d-inline text-extra-dark-gray light-font mb-0">
+                                 <countTo ref="count3" :startVal='start' :endVal='v2End' :duration='6000'></countTo>
+                            </h5> <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
                             <span class=" margin-10px-top d-block light-font text-small text-uppercase position-relative top-minus4">Visitors</span>
                             <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
                         </div>
@@ -203,109 +212,9 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-12 hover-option4 margin-5px-bottom">
-                    <div class="swiper-multy-row-container overflow-hidden swiper-container-initialized swiper-container-horizontal">
-                        <div class="swiper-wrapper">
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item swiper-slide-prev">
-                                <a href="xioki.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/xoiki/xioki_1.jpg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Xioki</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Ideation + Branding + Identity</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item swiper-slide-active">
-                                <a href="ideotic.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/ideotic/peach.jpg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Ideotic</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Business Development + Outreach</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item swiper-slide-next">
-                                <a href="ponnappa.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/ponnappa/2.jpg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Shradha Ponnappa</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Business Development + Curations + Strategies</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item">
-                                <a href="area83.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/area83/area-3.jpeg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Area 83</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Branding + Identity</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item">
-                                <a href="ichange.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/i-ch-ind/5.jpeg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">I Change Indiranagar</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Branding + Identity + Curations</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item">
-                                <a href="spring.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/spring/spring-3.png" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Spring Diaries</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Business Development + Curations + Strategies</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                        </div>
-                        <!-- start slider pagination -->
-                        <div class="swiper-portfolio-prev swiper-button-black-highlight" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false"><i class="ti-arrow-left"></i></div>
-                        <div class="swiper-portfolio-next swiper-button-black-highlight" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><i class="ti-arrow-right"></i></div>
-                        <!-- end slider pagination -->
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                    </div>
-                </div>
+               <Slider/> 
             </div>
         </div>
     </section>
@@ -313,15 +222,40 @@
 </template>
 
 <script>
+  import Slider from '@/components/PortfolioSlider'   
 export default {
-
-  name: '	',
-
+  components:{
+    Slider
+  },
   data () {
     return {
-
+        start:0,
+        bEnd:15,
+        vEnd:300,
+        b2End:10,
+        v2End:100
     }
-  }
+  },
+    methods: {
+        startCount($v) {
+            /**
+              * on and once argument only
+                ~ el → dom element
+            **/
+            $v.enter = (el) => {
+                /* logic code */
+                this.$refs['count'].start()
+                 this.$refs['count1'].start()
+                  this.$refs['count2'].start()
+                   this.$refs['count3'].start()
+                
+            }
+            $v.exit = (el) => {
+                /* logic code */
+            }
+        },
+
+    },
 }
 </script>
 

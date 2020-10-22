@@ -5,13 +5,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 padding-20px-bottom">
-                            <img :src="require(`../assets/images/home-card/${fdata.image}`)" />
+                            <img :src="require(`../assets/images/home-card/${image}`)" />
                          <!--    <g-image :src="`/assets/images/home-card/${fdata.image}`" /> -->
                         </div>
                         <div class="col-12 col-lg-6 col-md-6">
                             <h3 class="text-uppercase">{{fdata.title}}</h3>
-                            <p>{{fdata.para1}}</p>
-                            <p>{{fdata.para2}}</p>
+                            <p>{{para1}}</p>
+                            <p>{{para2}}</p>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         <h5 class="alt-font text-extra-dark-gray">Register here!</h5>
                     </div>
                     <ValidationObserver v-slot="{ invalid }">
-                        <form id="form-submit" @submit.prevent="onSubmit">
+                        <form id="form-submit" @submit.prevent="onSub">
                             <div class="border-radius-8">
                                 <div class="row padding-100px-lr lr-20x-padding-mob">
                                     <div class="col-12 col-lg-6">
@@ -119,10 +119,10 @@
                                     <div class="col-12 text-center">
                                         <button type="submit" :disabled="invalid" class="btn btn-fm border-radius-4 btn-large margin-20px-top">Book now</button>
                                     </div>
-                                    <div class=" col-12 text-center margin-20px-top alert alert-success hidden">
+                                    <div v-if="flag" class=" col-12 text-center margin-20px-top alert alert-success hidden">
                                         Thank you for registering for the workshop! An email with the details will be sent to you shortly.
                                     </div>
-                                    <div class="col-12 text-center margin-20px-top alert alert-danger hidden">
+                                    <div v-else class="col-12 text-center margin-20px-top alert alert-danger hidden">
                                         <strong>Error!</strong> Something went wrong sending your message.
                                     </div>
                                 </div>
@@ -136,29 +136,31 @@
 </template>
 <script>
 import results from '@/data/events.json'
-// import axios from 'axios'
+import axios from 'axios'
 export default {
     name: ' ',
     data() {
         return {
             theme: true,
             fdata: {
-                fullName: '',
-                email: '',
-                phone: '',
-                referral: '',
-                referralCode: '',
-                designation: '',
-                companyName: '',
-                age: '',
-                firstTime: '',
+                fullName: 'test',
+                email: 'test@d.in',
+                phone: '1111111111',
+                referral: 'aaa',
+                referralCode: 'aaa',
+                designation: 'aaa',
+                companyName: 'aaa',
+                age: '11',
+                firstTime: 'yes',
                 title: '',
                 date: '',
                 time: '',
-                image:'',
             },
             results,
-            // flag:false
+            image:'',
+            para1:'',
+             para2:'',
+            flag:true
         }
     },
     mounted() {
@@ -166,17 +168,16 @@ export default {
         this.fdata.title = this.results[q].title
         this.fdata.date = this.results[q].date
         this.fdata.time = this.results[q].time
-        this.fdata.image = this.results[q].image
-        this.fdata.para1 = this.results[q].para1
-        this.fdata.para2 = this.results[q].para2
-        console.log(this.results[q].image)
+        this.image = this.results[q].image
+        this.para1 = this.results[q].para1
+        this.para2 = this.results[q].para2
     },
     methods: {
-        onSubmit(e) {
-            axios.post('https://ei1ujyrp95.execute-api.ap-south-1.amazonaws.com/01/event', fData).then(response => {
-               alert(sent);     
+        onSub() {
+            axios.post('#', this.fdata).then(response => {
+              this.flag =  true  
             }).catch((error)=>{
-                console.log(error)
+                this.flag= false
             })
         }
     }

@@ -11,12 +11,14 @@
                 </div>
             </div>
             <!--project-info-->
-            <div class="row padding-50px-lr">
+            <div  v-inview:once="startCount" class="row padding-50px-lr">
                 <div class="col-12 col-lg-6 md-margin-50px-bottom text-md-left text-center sm-margin-30px-bottom wow ">
                     <p class="margin-30px-top text-extra-dark-gray light-font">First Main curated an ideathon and hackathon at Mount Carmel College to channelize the creativity and skills of the students. Through this hackathon, we aimed at getting solutions for real-world problems for a sustainable and better tomorrow. The top 3 participants of the Hackathon got the opportunity to participate in the Smart India Hackathon, a nationwide initiative to provide students a platform to solve some of the pressing problems of the society.</p>
-                    <div class="">
+                    <div v-inview:once="startCount" class="">
                         <div class="">
-                            <h5 class="text-extra-dark-gray light-font margin-three-bottom timer d-inline" data-speed="2000" data-to="70">70</h5>
+                            <h5 class="text-extra-dark-gray light-font margin-three-bottom d-inline">
+                                 <countTo ref="count" :startVal='start' :endVal='sEnd' :duration='6000'></countTo>
+                            </h5>
                             <h5 class="margin-three-bottom d-inline-block light-font text-extra-dark-gray">+</h5>
                             <span class="text-small text-medium-gray text-uppercase d-block">STUDENTS</span>
                             <div  class="width-10 separator-line-horrizontal-medium-light2 executive d-inline-block"></div>
@@ -105,9 +107,28 @@ export default {
 
   data () {
     return {
-            theme:true
+            theme:true,
+            start:0,
+            sEnd:70
     }
-  }
+  },
+  methods: {
+        startCount($v) {
+            /**
+              * on and once argument only
+                ~ el → dom element
+            **/
+            $v.enter = (el) => {
+                /* logic code */
+                this.$refs['count'].start()
+                
+            }
+            $v.exit = (el) => {
+                /* logic code */
+            }
+        },
+
+    },
 }
 </script>
 

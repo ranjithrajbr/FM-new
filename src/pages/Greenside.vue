@@ -14,21 +14,27 @@
             <div class="row padding-50px-lr">
                 <div class="col-12 col-lg-6 md-margin-50px-bottom text-md-left text-center sm-margin-30px-bottom wow ">
                     <p class="margin-30px-top light-font text-extra-dark-gray">The Greener Side is an eco-friendly product only launchpad that was curated by First Main across various campuses in Bangalore. Students with green product or service ideas were given a platform to pitch their business ideas to industry experts with the aim of converting it into a workable business model.</p>
-                    <div class="d-flex justify-content-between">
+                    <div v-inview:once="startCount" class="d-flex justify-content-between">
                         <div class="">
-                            <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer d-inline" data-speed="2000" data-to="25"></h5>
+                            <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom d-inline">
+                                  <countTo ref="count" :startVal='start' :endVal='iEnd' :duration='6000'></countTo>
+                            </h5>
                             <h5 class="margin-three-bottom d-inline-block text-extra-dark-gray">+</h5>
                             <span class="text-small text-medium-gray text-uppercase d-block">Ideas</span>
                             <div class="separator-line-horrizontal-medium-light2 executive d-inline-block"></div>
                         </div>
                         <div class="">
-                            <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer d-inline" data-speed="2000" data-to="15"></h5>
+                            <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom  d-inline">
+                                 <countTo ref="count1" :startVal='start' :endVal='jEnd' :duration='6000'></countTo>
+                            </h5>
                             <h5 class="margin-three-bottom d-inline-block text-extra-dark-gray">+</h5>
                             <span class="text-small text-medium-gray text-uppercase d-block">Judges</span>
                             <div class="separator-line-horrizontal-medium-light2 executive d-inline-block"></div>
                         </div>
                         <div class="">
-                            <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer d-inline" data-speed="2000" data-to="3000"></h5>
+                            <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom  d-inline">
+                                 <countTo ref="count2" :startVal='start' :endVal='sEnd' :duration='6000'></countTo>
+                            </h5>
                             <h5 class="margin-three-bottom d-inline-block text-extra-dark-gray">+</h5>
                             <span class="text-small text-medium-gray text-uppercase d-block">Students</span>
                             <div class="separator-line-horrizontal-medium-light2 executive d-inline-block"></div>
@@ -118,9 +124,32 @@ export default {
 
   data () {
     return {
-        theme:true
+        theme:true,
+        start:0,
+        iEnd:25,
+        jEnd:15,
+        sEnd:3000
     }
-  }
+  },
+    methods: {
+        startCount($v) {
+            /**
+              * on and once argument only
+                ~ el → dom element
+            **/
+            $v.enter = (el) => {
+                /* logic code */
+                this.$refs['count'].start()
+                 this.$refs['count1'].start()
+                  this.$refs['count2'].start()
+                
+            }
+            $v.exit = (el) => {
+                /* logic code */
+            }
+        },
+
+    },
 }
 </script>
 

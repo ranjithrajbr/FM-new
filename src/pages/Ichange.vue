@@ -175,109 +175,9 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-12 hover-option4 margin-5px-bottom">
-                    <div class="swiper-multy-row-container overflow-hidden swiper-container-initialized swiper-container-horizontal">
-                        <div class="swiper-wrapper">
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item swiper-slide-prev">
-                                <a href="xioki.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/xoiki/xioki_1.jpg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Xioki</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Ideation + Branding + Identity</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item swiper-slide-active">
-                                <a href="ideotic.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/ideotic/peach.jpg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Ideotic</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Business Development + Outreach</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item swiper-slide-next">
-                                <a href="ponnappa.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/ponnappa/2.jpg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Shradha Ponnappa</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Business Development + Curations + Strategies</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item">
-                                <a href="area83.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/area83/area-3.jpeg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Area 83</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Branding + Identity</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item">
-                                <a href="ichange.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/i-ch-ind/5.jpeg" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">I Change Indiranagar</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Branding + Identity + Curations</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                            <!-- start portfolio slider item -->
-                            <div class="swiper-slide grid-item">
-                                <a href="spring.html">
-                                    <figure>
-                                        <div class="portfolio-img bg-extra-dark-gray"><img src="../assets/images/spring/spring-3.png" alt="" data-no-retina=""></div>
-                                        <figcaption class="d-flex justify-content-center align-items-center text-center">
-                                            <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                <span class="font-weight-600 line-height-normal alt-font text-white-2 text-uppercase margin-5px-bottom d-block">Spring Diaries</span>
-                                                <p class="text-medium-gray text-uppercase text-extra-small">Business Development + Curations + Strategies</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- end portfolio slider item -->
-                        </div>
-                        <!-- start slider pagination -->
-                        <div class="swiper-portfolio-prev swiper-button-black-highlight" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false"><i class="ti-arrow-left"></i></div>
-                        <div class="swiper-portfolio-next swiper-button-black-highlight" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><i class="ti-arrow-right"></i></div>
-                        <!-- end slider pagination -->
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                    </div>
-                </div>
+               <Slider/>
             </div>
         </div>
     </section>
@@ -285,9 +185,13 @@
 </template>
 
 <script>
+    import Slider from '@/components/PortfolioSlider'
 export default {
 
   name: '	',
+  components:{
+    Slider
+  },
 
   data () {
     return {

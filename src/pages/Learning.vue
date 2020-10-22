@@ -226,7 +226,7 @@
                                 <li class="grid-sizer"></li>
                                 <!-- start  portfolio-item item -->
                                 <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="greenside.html">
+                                    <a href="/greenside">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/green.jpg" alt="" />
                                                 <div class="position-absolute title-top title-vanish">
@@ -251,7 +251,7 @@
                                 <!-- end portfolio item -->
                                 <!-- start  portfolio-item item -->
                                 <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="fm-workshop.html">
+                                    <a href="/workshop">
                                         <figure>
                                             <div class="portfolio-img bg-extra-dark-gray "><img src="../assets/images/learning/fm-wrk.jpg" alt="">
                                                 <div class="position-absolute title-top title-vanish">
@@ -276,7 +276,7 @@
                                 <!-- end portfolio item -->
                                 <!-- start  portfolio-item item -->
                                 <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="Ideathon">
+                                    <a href="/Ideathon">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/idea-hack.jpg" alt="" />
                                                 <div class="position-absolute title-top title-vanish">
@@ -301,7 +301,7 @@
                                 <!-- end portfolio item -->
                                 <!-- start  portfolio-item item -->
                                 <li class="grid-item web branding design  last-paragraph-no-margin">
-                                    <a href="Incubator">
+                                    <a href="/Incubator">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/pre-incub.jpg" alt="">
                                                 <div class="position-absolute title-top title-vanish">

@@ -1,13 +1,12 @@
 <template>
-    <Layout>
-        <section class="wow no-padding-bottom bg-index-position-mob bg-index-position-tab" :style="{
-         backgroundColor: '#0865ab',
-         backgroundImage: 'url('+require('../assets/images/index/final-star.svg')+')',
-         backgroundAttachment: 'inherit',
-         backgroundPosition: 'right top -20%',
-         backgroundSize: '80%',
-         backgroundRepeat: 'no-repeat'}
-         ">
+  <div v-if="loading" style="display: flex;justify-content: center;align-items: center;height: 100%;width:100%">
+    <div class="spinner-border text-primary">
+            <span class="sr-only">loading</span>
+    </div>
+</div>
+    <Layout v-else>
+      
+        <section class="wow no-padding-bottom bg-index-position-mob bg-index-position-tab" :style="{backgroundColor: '#0865ab',backgroundImage: 'url('+require('../assets/images/index/final-star.svg')+')', backgroundAttachment: 'inherit',backgroundPosition: 'right top -20%',backgroundSize: '80%',backgroundRepeat: 'no-repeat'}">
             <div class="height-90px"></div>
             <div class="container position-relative container-custom">
                 <div class="row">
@@ -22,14 +21,14 @@
                     </div>
                     <div class="col-12 col-lg-7 col-md-12">
                         <div class="row">
-                           <!--  <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvents.edges" :key="edge.node.id">
+                            <!--  <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvents.edges" :key="edge.node.id">
                                 <g-link :to="`/form?id=${edge.node.id}`">
                                     <g-image class="home-cards" :src="require(`../assets/images/home-card/${edge.node.image}`)"/>
                                 </g-link>
                             </div> -->
-                             <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="(result,index) in results" :key="index">
+                            <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="(result,index) in results" :key="index">
                                 <g-link :to="`/form?id=${index}`">
-                                    <g-image class="home-cards" :src="require(`../assets/images/home-card/${result.image}`)"/>
+                                    <g-image class="home-cards" :src="require(`../assets/images/home-card/${result.image}`)" />
                                 </g-link>
                             </div>
                         </div>
@@ -50,9 +49,7 @@
                 </div>
             </div>
             <!-- end page title section -->
-            <div style="
-            background: linear-gradient(0deg, #f8f9fa 30% 70%, #ffffff 70% 30%);
-            " class="position-relative">
+            <div style="background: linear-gradient(0deg, #f8f9fa 30% 70%, #ffffff 70% 30%);" class="position-relative">
                 <div id="second" class="container container-custom">
                     <img class="discuss hidden-xs" src="../assets/images/index/discuss.svg" />
                     <div class="row justify-content-between">
@@ -82,7 +79,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
         <!-- start tab style 01 section -->
@@ -151,70 +147,72 @@
         </section>
         <!-- end tab style 01 section -->
         <!-- start counter section -->
-        <section class="wow">
-            <div class="container position-relative">
-                <div class="row justify-content-center sm-no-padding padding-100px-right padding-50px-left xl-no-padding-right">
-                    <!-- counter box item -->
-                    <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
-                        <div class="feature-box-5 position-relative">
-                            <div class="feature-content">
-                                <h5 class="d-inline text-extra-dark-gray light-font mb-0 timer" data-speed="2000" data-to="50">
-                                    50
-                                </h5>
-                                <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
-                                <span class="margin-10px-top light-font d-block text-small text-uppercase position-relative top-minus4">Happy clients</span>
-                                <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+        <section>
+            <div v-inview:once="startCount">
+                <div class="container position-relative">
+                    <div class="row justify-content-center sm-no-padding padding-100px-right padding-50px-left xl-no-padding-right">
+                        <!-- counter box item -->
+                        <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
+                            <div class="feature-box-5 position-relative">
+                                <div class="feature-content">
+                                    <h5 class="d-inline text-extra-dark-gray light-font mb-0">
+                                        <countTo ref="count" :startVal='start' :endVal='hapEnd' :duration='6000'></countTo>
+                                    </h5>
+                                    <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                                    <span class="margin-10px-top light-font d-block text-small text-uppercase position-relative top-minus4">Happy clients</span>
+                                    <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end counter box item -->
-                    <!-- counter box item -->
-                    <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
-                        <div class="feature-box-5 position-relative">
-                            <div class="feature-content">
-                                <h5 class="d-inline light-font text-extra-dark-gray mb-0 timer" data-speed="2000" data-to="10">
-                                    10
-                                </h5>
-                                <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
-                                <span class="light-font margin-10px-top d-block text-small text-uppercase position-relative top-minus4">Curations</span>
-                                <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                        <!-- end counter box item -->
+                        <!-- counter box item -->
+                        <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
+                            <div class="feature-box-5 position-relative">
+                                <div class="feature-content">
+                                    <h5 class="d-inline light-font text-extra-dark-gray mb-0">
+                                          <countTo  ref="count1"   :startVal='start' :endVal='currEnd' :duration='6000'></countTo>
+                                    </h5>
+                                    <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                                    <span class="light-font margin-10px-top d-block text-small text-uppercase position-relative top-minus4">Curations</span>
+                                    <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end counter box item -->
-                    <!-- counter box item -->
-                    <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
-                        <div class="feature-box-5 position-relative">
-                            <div class="feature-content">
-                                <h5 class="d-inline light-font text-extra-dark-gray mb-0 timer" data-speed="2000" data-to="60">
-                                    60
-                                </h5>
-                                <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
-                                <span class="light-font margin-10px-top d-block text-small text-uppercase position-relative top-minus4">Innovations</span>
-                                <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                        <!-- end counter box item -->
+                        <!-- counter box item -->
+                        <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
+                            <div class="feature-box-5 position-relative">
+                                <div class="feature-content">
+                                    <h5 class="d-inline light-font text-extra-dark-gray mb-0">
+                                            <countTo ref="count2"  :startVal='start' :endVal='innEnd' :duration='6000'></countTo>
+                                    </h5>
+                                    <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                                    <span class="light-font margin-10px-top d-block text-small text-uppercase position-relative top-minus4">Innovations</span>
+                                    <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end counter box item -->
-                    <!-- counter box item -->
-                    <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
-                        <div class="feature-box-5 position-relative">
-                            <div class="feature-content">
-                                <h5 class="d-inline text-extra-dark-gray light-font mb-0 timer" data-speed="2000" data-to="100">
-                                    100
-                                </h5>
-                                <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
-                                <span class="margin-10px-top d-block text-small text-uppercase position-relative light-font top-minus4">Entrepreneurs</span>
-                                <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                        <!-- end counter box item -->
+                        <!-- counter box item -->
+                        <div class="col-12 col-lg-3 col-md-6 md-padding-twelve-left md-margin-ten-bottom sm-margin-30px-bottom sm-padding-15px-left wow Right">
+                            <div class="feature-box-5 position-relative">
+                                <div class="feature-content">
+                                    <h5 class="d-inline text-extra-dark-gray light-font mb-0">
+                                          <countTo ref="count3"  :startVal='start' :endVal='entEnd' :duration='6000'></countTo>
+                                    </h5>
+                                    <span class="text-extra-large d-inline text-extra-dark-gray light-font mb-0">+</span>
+                                    <span class="margin-10px-top d-block text-small text-uppercase position-relative light-font top-minus4">Entrepreneurs</span>
+                                    <div class="center-mob margin-10px-top separator-line-horrizontal-medium-light2 executive text-center"></div>
+                                </div>
                             </div>
                         </div>
+                        <!-- end counter box item -->
                     </div>
-                    <!-- end counter box item -->
-                </div>
-                <div class="row justify-content-center">
-                    <div class="d-flex width-100 two-counter-blob position-absolute justify-content-between align-items-end">
-                        <img class="sm-height-50px" src="../assets/images/learning/left-blob.svg" />
-                        <img class="sm-height-70px" src="../assets/images/learning/right-blob.svg" />
+                    <div class="row justify-content-center">
+                        <div class="d-flex width-100 two-counter-blob position-absolute justify-content-between align-items-end">
+                            <img class="sm-height-50px" src="../assets/images/learning/left-blob.svg" />
+                            <img class="sm-height-70px" src="../assets/images/learning/right-blob.svg" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -271,77 +269,12 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-7 text-center margin-50px-bottom sm-margin-40px-bottom">
                         <div class="position-relative overflow-hidden w-100">
-                            <h6 class=" alt-font text-white">What we have to say</h6>
+                            <h6 class=" alt-font">What we have to say</h6>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="swiper-slider-second swiper-container white-move">
-                        <div class="swiper-wrapper">
-                            <!-- start testimonial slide item -->
-                            <div class="swiper-slide">
-                                <div class="row justify-content-center m-0">
-                                    <div class="col-12 col-lg-7 col-md-10">
-                                        <div class="media d-block align-items-start d-md-flex text-center text-md-left  padding-30px-lr lg-padding-15px-lr width-100">
-                                            <img src="../assets/images/index/sinan.jpg" alt="" class="rounded-circle width-110px margin-50px-right lg-width-100px md-width-120px sm-width-100px  sm-no-margin-right sm-margin-15px-bottom" />
-                                            <div class="media-body last-paragraph-no-margin">
-                                                <p class="text-extra-light-gray text-medium light-font">E-learning is an essential in today’s fast-paced world as it brings learning to people instead of people to learning. Online pedagogy is all about designing an experience as it compels to teach tomorrow’s skills today.</p>
-                                                <span class="text-white-2 medium-font d-block text-medium margin-15px-top project-font">Sinan Denji</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- start testimonial slide item -->
-                            <div class="swiper-slide">
-                                <div class="row justify-content-center m-0">
-                                    <div class="col-12 col-lg-7 col-md-10">
-                                        <div class="media d-block d-md-flex text-center text-md-left align-items-start padding-30px-lr lg-padding-15px-lr width-100">
-                                            <img src="../assets/images/index/sargam.jpg" alt="" class="rounded-circle width-110px margin-50px-right lg-width-100px md-width-120px sm-width-100px sm-no-margin-right sm-margin-15px-bottom" />
-                                            <div class="media-body last-paragraph-no-margin">
-                                                <p class="text-extra-light-gray text-medium light-font">Every product or service we consume is an outcome of entrepreneurship as a solution to today's problems for a better tomorrow. This could be a new solution like an innovation or could be enhancement of an existing innovation.</p>
-                                                <span class="text-white-2 medium-font d-block text-medium margin-15px-top project-font">Sargam Garg</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end testimonial slide item -->
-                            <!-- start testimonial slide item -->
-                            <div class="swiper-slide">
-                                <div class="row justify-content-center m-0">
-                                    <div class="col-12 col-lg-7 col-md-10">
-                                        <div class="media d-block d-md-flex text-center text-md-left align-items-start padding-30px-lr lg-padding-15px-lr width-100">
-                                            <img src="../assets/images/index/soumya.jpg" alt="" class="rounded-circle width-110px margin-50px-right lg-width-100px md-width-120px sm-width-100px sm-no-margin-right sm-margin-15px-bottom" />
-                                            <div class="media-body last-paragraph-no-margin">
-                                                <p class="text-extra-light-gray text-medium light-font">Imagine a space where all entrepreneurs could come together in an ecosystem and work towards a common good. This will help us work beyond competition and with collaborations, there’s nothing a community of entrepreneurs can’t overcome.</p>
-                                                <span class="text-white-2 medium-font d-block text-medium margin-15px-top project-font">Soumya Bhasin</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end testimonial slide item -->
-                            <!-- start testimonial slide item -->
-                            <div class="swiper-slide">
-                                <div class="row justify-content-center m-0">
-                                    <div class="col-12 col-lg-7 col-md-10">
-                                        <div class="media d-block d-md-flex text-center text-md-left align-items-start padding-30px-lr lg-padding-15px-lr width-100">
-                                            <img src="../assets/images/index/nishchal.jpg" alt="" class="rounded-circle width-110px margin-50px-right lg-width-100px md-width-120px sm-width-100px sm-no-margin-right sm-margin-15px-bottom" />
-                                            <div class="media-body last-paragraph-no-margin">
-                                                <p class="text-extra-light-gray text-medium light-font">We all get dealt the same pack of cards but the way we play is what separates us from being creators and following the herd and entrepreneurship is a journey we take to build our business and create a brand.</p>
-                                                <span class="text-white-2 medium-font d-block text-medium margin-15px-top project-font">Nishchal Jain</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end testimonial slide item -->
-                        </div>
-                        <div class="swiper-pagination d-none"></div>
-                        <div class="swiper-button-next slider-long-arrow-white"></div>
-                        <div class="swiper-button-prev slider-long-arrow-white"></div>
-                    </div>
+                    <HomeSlider />
                 </div>
             </div>
         </section>
@@ -350,7 +283,7 @@
         <section class="wow bg-page-gray">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
+                    <div class="col-12 col-lg-7 text-center  sm-margin-40px-bottom">
                         <div class="position-relative overflow-hidden w-100">
                             <h6 class=" text-extra-dark-gray text-outside-line-full alt-font">Clientele
                             </h6>
@@ -358,241 +291,70 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="swiper-container wow  black-move swiper-pagination-bottom">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/1.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/2.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/3.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/4.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/5.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/6.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center   d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/7.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/8.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/9.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/10.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/11.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/12.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/13.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/14.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/15.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/16.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/17.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/18.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center   d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/19.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/20.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/21.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/22.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/23.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/24.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/25.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/26.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center d-flex flex-column align-items-center justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/27.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/28.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="row">
-                                    <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                                        <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/29.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
-                    </div>
+                    <Sliderone />
                 </div>
             </div>
         </section>
         <!-- client carousel style 1 end-->
-        <!-- recent-blog-->
-        <section class="extra-color padding-30px-bottom no-padding-top">
-            <!--padding-30px-bottom-->
-            <div class="container">
-                <div style="display: none;" class="row justify-content-center">
-                    <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
-                        <div class="position-relative overflow-hidden w-100">
-                            <span class="text-medium text-uppercase text-extra-dark-gray alt-font text-outside-line-fulltext-uppercase">Recent Blogs</span>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: none;" class="row">
-                    <!-- start post item -->
-                    <div class="col-12 col-lg-3 col-md-6 margin-80px-bottom md-margin-50px-bottom sm-margin-30px-bottom sm-text-center">
-                        <div class="blog-post blog-post-style2">
-                            <div class="post-details">
-                                <span class="text-large alt-font width-85 lg-width-95 margin-15px-bottom d-block"><a href="https://stack.firstmain.org" target="_blank" class="text-extra-dark-gray">New Way Forward for the Sports Industry</a></span>
-                                <p class="width-90 light-font sm-margin-15px-bottom sm-width-100">
-                                    Empty stadiums, fields and courts are a common sight across the world because of COVID-19...
-                                </p>
-                                <div class="author border-top border-color-extra-light-gray padding-25px-top sm-padding-15px-top">
-                                    <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left alt-font">by Aditya Ponnappa</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="col-12 col-lg-3 col-md-6 margin-80px-bottom md-margin-50px-bottom sm-margin-30px-bottom sm-text-center">
-                        <div class="blog-post blog-post-style2">
-                            <div class="post-details">
-                                <span class="text-large alt-font width-85 lg-width-95 margin-15px-bottom d-block"><a href="https://stack.firstmain.org" target="_blank" class="text-extra-dark-gray">Survival of the smartest</a></span>
-                                <p class="width-90 light-font sm-margin-15px-bottom sm-width-100">
-                                    Traditional survival of the "fittest" may not be the right way for a brand to surpass a crisis...
-                                </p>
-                                <div class="author border-top border-color-extra-light-gray padding-25px-top sm-padding-15px-top">
-                                    <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left alt-font">by Malvika Ramesh</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="col-12 col-lg-3 col-md-6 margin-80px-bottom md-margin-50px-bottom sm-margin-30px-bottom sm-text-center">
-                        <div class="blog-post blog-post-style2">
-                            <div class="post-details">
-                                <span class="text-large alt-font width-85 lg-width-95 margin-15px-bottom d-block"><a href="https://stack.firstmain.org" target="_blank" class="text-extra-dark-gray">5 Industries that will thrive post COVID</a></span>
-                                <p class="width-90 light-font sm-margin-15px-bottom sm-width-100">
-                                    The pandemic has resulted in the downfall of many industries but here are 5 industries that will emerge...
-                                </p>
-                                <div class="author border-top border-color-extra-light-gray padding-25px-top sm-padding-15px-top">
-                                    <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left alt-font">by Aditya Ponnappa</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="col-12 col-lg-3 col-md-6 margin-80px-bottom md-margin-50px-bottom sm-margin-30px-bottom sm-text-center">
-                        <div class="blog-post blog-post-style2">
-                            <div class="post-details">
-                                <span class="text-large alt-font width-85 lg-width-95 margin-15px-bottom d-block"><a href="https://stack.firstmain.org" target="_blank" class="text-extra-dark-gray">The "Middle" Economy</a></span>
-                                <p class="width-90 light-font sm-margin-15px-bottom sm-width-100">
-                                    With metropolitan cities exhausting, the middle income cities emerge...
-                                </p>
-                                <div class="author border-top border-color-extra-light-gray padding-25px-top sm-padding-15px-top">
-                                    <span class="text-medium-gray text-uppercase text-extra-small padding-15px-left alt-font">by Malvika Ramesh</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                </div>
-                <div style="display: none;" class="row justify-content-center">
-                    <div class="col-12 col-lg-6 col-md-10 text-center">
-                        <div class="btn-dual">
-                            <a href="https://stack.firstmain.org" target="_blank" role="button" class="btn btn-fm border-radius-4 btn-medium lg-margin-15px-bottom">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row padding-80px-top">
-                    <div class="col-md-4 col-sm-4 d-flex justify-content-start img-mob">
-                        <img class="sm-margin-lr-auto" style="height: 100px;" src="../assets/images/test.svg" />
-                    </div>
-                    <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <p class="sm-margin-two-tb text-center text-extra-dark-gray light-font">We are here to <b>ideate, create</b> and <b>operate</b> for
-                            you.
-                        </p>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-center justify-content-end">
-                        <a href="contact" class="btn btn-small margin-15px-bottom btn-rounded btn-transparent-dark-gray sm-margin-lr-auto">Contact us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </Layout>
 </template>
 <script>
-import results from '@/data/events.json'
+import Sliderone from '@/components/Sliderone'
+import HomeSlider from '@/components/HomeSlider'
 export default {
     name: 'Index',
+    components: {
+        Sliderone,
+        HomeSlider
+    },
+    created() {
+        this.loading = true
+        fetch('/data/events.json')
+            .then(res => res.json())
+            .then((data) => {
+                this.results = data
+               
+            }).catch((error) => {
+                console.log(error)
+            }).finally(()=>{
+                 this.loading = false
+            })
+
+    },
+    methods: {
+       
+        startCount($v) {
+            /**
+              * on and once argument only
+                ~ el → dom element
+            **/
+            $v.enter = (el) => {
+                /* logic code */
+                this.$refs['count'].start()
+                 this.$refs['count1'].start()
+                  this.$refs['count2'].start()
+                   this.$refs['count3'].start()
+                
+            }
+            $v.exit = (el) => {
+                /* logic code */
+            }
+        },
+
+    },
     data() {
         return {
-            results
+            results: [],
+            start: 0,
+            hapEnd: 50,
+            currEnd:10,
+            innEnd:60,
+            entEnd:100,
+            loading: true
         }
+
     },
 }
 </script>
-<style>
+<style scoped>
 </style>

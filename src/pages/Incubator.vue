@@ -11,18 +11,22 @@
                 </div>
             </div>
             <!--project-info-->
-            <div class="row padding-50px-lr">
+            <div v-inview:once="startCount" class="row padding-50px-lr">
                 <div class="col-12 col-lg-6 md-margin-50px-bottom text-md-left text-center sm-margin-30px-bottom wow ">
                     <p class="margin-30px-top text-extra-dark-gray light-font">First Main curates a 36-hour program to help entrepreneurs and start-ups reach the MVP stage, making them incubation ready. This enhancement program focuses on showing participants what the real market is like and how and where their product or service fits.</p>
                     <div class="d-flex justify-content-between">
                         <div class="">
-                            <h5 class="text-extra-dark-gray light-font margin-three-bottom timer d-inline" data-speed="2000" data-to="5">5</h5>
+                            <h5 class="text-extra-dark-gray light-font margin-three-bottom timer d-inline">
+                                    <countTo ref="count" :startVal='start' :endVal='iEnd' :duration='6000'></countTo>
+                            </h5>
                             <h5 class="margin-three-bottom light-font d-inline-block text-extra-dark-gray">+</h5>
                             <span class="text-small text-medium-gray text-uppercase d-block">Business Ideas</span>
                             <div class="separator-line-horrizontal-medium-light2 executive d-inline-block"></div>
                         </div>
                         <div class="">
-                            <h5 class="text-extra-dark-gray light-font margin-three-bottom timer d-inline" data-speed="8" data-to="8"></h5>
+                            <h5 class="text-extra-dark-gray light-font margin-three-bottom  d-inline">
+                                    <countTo ref="count1" :startVal='start' :endVal='eEnd' :duration='6000'></countTo>
+                            </h5>
                             <h5 class="margin-three-bottom d-inline-block text-extra-dark-gray light-font">+</h5>
                             <span class="text-small text-medium-gray text-uppercase d-block">Entrepreneurs</span>
                             <div class="separator-line-horrizontal-medium-light2 executive d-inline-block"></div>
@@ -89,9 +93,30 @@ export default {
 
   data () {
     return {
-        theme:true
+        theme:true,
+        iEnd:5,
+        eEnd:8
     }
-  }
+  },
+  methods: {
+        startCount($v) {
+            /**
+              * on and once argument only
+                ~ el → dom element
+            **/
+            $v.enter = (el) => {
+                /* logic code */
+                this.$refs['count'].start()
+                 this.$refs['count1'].start()
+                  this.$refs['count2'].start()
+                
+            }
+            $v.exit = (el) => {
+                /* logic code */
+            }
+        },
+
+    },
 }
 </script>
 
