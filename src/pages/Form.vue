@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 padding-20px-bottom">
                             <!-- <img :src="require(`../static/home-card/${image}`)" /> -->
-                            <g-image :src="`home-card/${image}`" />
+                            <g-image :src="`home-card/${image}`"/>
                           
                         </div>
                         <div class="col-12 col-lg-6 col-md-6">
