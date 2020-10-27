@@ -311,10 +311,10 @@ export default {
     created() {
         this.loading = true
         axios.get('data/events.json')
-            .then(res => res.json())
             .then((data) => {
-                this.results = data
-               
+                console.log('hit')
+                this.results = data.data 
+                console.log(this.results)  
             }).catch((error) => {
                 console.log(error)
             }).finally(()=>{
