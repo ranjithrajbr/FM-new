@@ -301,6 +301,7 @@
 <script>
 import Sliderone from '@/components/Sliderone'
 import HomeSlider from '@/components/HomeSlider'
+import axios from 'axios'
 export default {
     name: 'Index',
     components: {
@@ -309,7 +310,7 @@ export default {
     },
     created() {
         this.loading = true
-        fetch('/data/events.json')
+        axios.get('data/events.json')
             .then(res => res.json())
             .then((data) => {
                 this.results = data
