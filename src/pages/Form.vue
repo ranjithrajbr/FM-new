@@ -5,8 +5,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 padding-20px-bottom">
-                            <img :src="require(`../assets/images/home-card/${image}`)" />
-                         <!--    <g-image :src="`/assets/images/home-card/${fdata.image}`" /> -->
+                           <!--  <img :src="require(`../assets/images/home-card/${image}`)" /> -->
+                            <g-image :src="require(`../assets/images/home-card/${image}`)" />
                         </div>
                         <div class="col-12 col-lg-6 col-md-6">
                             <h3 class="text-uppercase">{{fdata.title}}</h3>
