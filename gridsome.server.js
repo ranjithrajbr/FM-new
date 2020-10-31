@@ -6,24 +6,25 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 
-const events = require('./src/data/test.json')
+const axios = require('axios')
 
 module.exports = function (api) {
-  api.loadSource(store => {
-    const contentType = store.addCollection({
-      typeName: 'Events',
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://firstmain-backend.herokuapp.com/events')
 
+    const collection = actions.addCollection({
+      typeName:'Event',
+      path:'/form/:id'
     })
-
-    for (const item of events) {
-      contentType.addNode({
-      	id:item.id,
-        date: item.date,
-        time: item.time,
-        title:item.title,
-        image:item.image,
-        para1:item.para1,
-        para2:item.para2
+    for (const item of data) {
+      console.log('api call')
+      collection.addNode({
+        id: item.id,
+        path:'/event/'+item.id,
+        title: item.Title,
+        description:item.Description,
+        image:item.image.formats.medium.url,
+        date:item.date
       })
     }
   })

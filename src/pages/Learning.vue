@@ -1,11 +1,11 @@
 <template>
     <Layout>
         <section class="bg-position-center-right-mob padding-60px-bottom position-relative  background-size-cover" :style="{
-			backgroundImage:'url('+require('../assets/images/learning/banner-learn.svg')+')',
-			backgroundColor:'#0865AB',
-			backgroundPosition:'bottom 0px left 130px',
-			backgroundSize:'cover',
-			backgroundRepeat: 'no-repeat'}">
+            backgroundImage:'url('+require('../assets/images/learning/banner-learn.svg')+')',
+            backgroundColor:'#0865AB',
+            backgroundPosition:'bottom 0px left 130px',
+            backgroundSize:'cover',
+            backgroundRepeat: 'no-repeat'}">
             <div class="container container-custom">
                 <div class="row">
                     <div class="col-12 col-lg-6 col-md-6 d-flex flex-column justify-content-center extra-small-screen text-md-left text-center sm-padding-15px-lr">
@@ -29,9 +29,9 @@
                 </div>
                 <div class="container padding-40px-top">
                     <div class="row">
-                        <div class="col-12 col-lg-4 col-md-4 padding-40px-bottom" v-for="(result,index) in results">
+                        <div class="col-12 col-lg-4 col-md-4 padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
                             <a>
-                                <img class="learn-cards" :src="require(`../assets/images/home-card/${result.image}`)">
+                                <img class="learn-cards" :src="`https://firstmain-backend.herokuapp.com${edge.node.image}`" >
                             </a>
                         </div>
                     </div>
@@ -220,38 +220,40 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 px-3 p-md-0">
+                    <div class="col-12 col-lg-3">
                         <div class="filter-content overflow-hidden">
-                            <ul class="portfolio-grid work-4col hover-option5 no-margin-lr">
-                                <li class="grid-sizer"></li>
-                                <!-- start  portfolio-item item -->
-                                <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="/greenside">
-                                        <figure>
-                                            <div class="portfolio-img"><img src="../assets/images/learning/green.jpg" alt="" />
-                                                <div class="position-absolute title-top title-vanish">
-                                                    <h6 class=" alt-font font-weight-700 text-uppercase text-white">The Greener Side</h6>
-                                                    <div class="separator-line-horrizontal-medium-light2 executive margin-30px-top"></div>
-                                                </div>
+                            <div class="portfolio-grid work-4col hover-option5 no-margin-lr">
+                                <div class="grid-item web branding design last-paragraph-no-margin">
+                                <a href="/greenside">
+                                    <figure>
+                                        <div class="portfolio-img"><img src="../assets/images/learning/green.jpg" alt="" />
+                                            <div class="position-absolute title-top title-vanish">
+                                                <h6 class=" alt-font font-weight-700 text-uppercase text-white">The Greener Side</h6>
+                                                <div class="separator-line-horrizontal-medium-light2 executive margin-30px-top"></div>
                                             </div>
-                                            <figcaption>
-                                                <div class="portfolio-hover-main text-left">
-                                                    <div class="portfolio-hover-box align-bottom">
-                                                        <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
-                                                            <h6 class="text-white-2 d-block light-font">The Greener Side</h6>
-                                                            <p class="text-white-2 light-font">Sustainable green product launchpad curated at educational institutions in Bangalore.</p>
-                                                            <div class="executive margin-55px-top position-relative separator-line-horrizontal-medium-light2"></div>
-                                                        </div>
+                                        </div>
+                                        <figcaption>
+                                            <div class="portfolio-hover-main text-left">
+                                                <div class="portfolio-hover-box align-bottom">
+                                                    <div class="portfolio-hover-content position-relative last-paragraph-no-margin">
+                                                        <h6 class="text-white-2 d-block light-font">The Greener Side</h6>
+                                                        <p class="text-white-2 light-font">Sustainable green product launchpad curated at educational institutions in Bangalore.</p>
+                                                        <div class="executive margin-55px-top position-relative separator-line-horrizontal-medium-light2"></div>
                                                     </div>
                                                 </div>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <!-- end portfolio item -->
-                                <!-- start  portfolio-item item -->
-                                <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="/workshop">
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="filter-content overflow-hidden">
+                            <div class="portfolio-grid work-4col hover-option5 no-margin-lr">
+                                <div class="grid-item web branding design last-paragraph-no-margin">
+                                <a href="/workshop">
                                         <figure>
                                             <div class="portfolio-img bg-extra-dark-gray "><img src="../assets/images/learning/fm-wrk.jpg" alt="">
                                                 <div class="position-absolute title-top title-vanish">
@@ -272,11 +274,15 @@
                                             </figcaption>
                                         </figure>
                                     </a>
-                                </li>
-                                <!-- end portfolio item -->
-                                <!-- start  portfolio-item item -->
-                                <li class="grid-item web branding design last-paragraph-no-margin">
-                                    <a href="/Ideathon">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="filter-content overflow-hidden">
+                            <div class="portfolio-grid work-4col hover-option5 no-margin-lr">
+                                <div class="grid-item web branding design last-paragraph-no-margin">
+                                 <a href="/Ideathon">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/idea-hack.jpg" alt="" />
                                                 <div class="position-absolute title-top title-vanish">
@@ -297,11 +303,15 @@
                                             </figcaption>
                                         </figure>
                                     </a>
-                                </li>
-                                <!-- end portfolio item -->
-                                <!-- start  portfolio-item item -->
-                                <li class="grid-item web branding design  last-paragraph-no-margin">
-                                    <a href="/Incubator">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-12 col-lg-3">
+                        <div class="filter-content overflow-hidden">
+                            <div class="portfolio-grid work-4col hover-option5 no-margin-lr">
+                                <div class="grid-item web branding design last-paragraph-no-margin">
+                                 <a href="/Incubator">
                                         <figure>
                                             <div class="portfolio-img"><img src="../assets/images/learning/pre-incub.jpg" alt="">
                                                 <div class="position-absolute title-top title-vanish">
@@ -322,9 +332,8 @@
                                             </figcaption>
                                         </figure>
                                     </a>
-                                </li>
-                                <!-- end portfolio item -->
-                            </ul>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -434,11 +443,22 @@
         <!-- end call to action section -->
     </Layout>
 </template>
+<page-query>
+    query{
+    allEvent{
+    edges{
+    node{
+    image
+}
+}
+}
+}
+</page-query>
 <script>
 import results from '@/data/events.json'
 export default {
 
-    name: '	',
+    name: ' ',
 
     data() {
         return {

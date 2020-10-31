@@ -1,10 +1,5 @@
 <template>
-  <div v-if="loading" style="display: flex;justify-content: center;align-items: center;height: 100%;width:100%">
-    <div class="spinner-border text-primary">
-            <span class="sr-only">loading</span>
-    </div>
-</div>
-    <Layout v-else>
+    <Layout>
       
         <section class="wow no-padding-bottom bg-index-position-mob bg-index-position-tab" :style="{backgroundColor: '#0865ab',backgroundImage: 'url('+require('../assets/images/index/final-star.svg')+')', backgroundAttachment: 'inherit',backgroundPosition: 'right top -20%',backgroundSize: '80%',backgroundRepeat: 'no-repeat'}">
             <div class="height-90px"></div>
@@ -26,9 +21,9 @@
                                     <g-image class="home-cards" :src="require(`../assets/images/home-card/${edge.node.image}`)"/>
                                 </g-link>
                             </div> -->
-                            <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="(result,index) in results" :key="index">
-                                <g-link :to="`/form?id=${index}`">
-                                    <g-image class="home-cards" :src="require(`../assets/images/home-card/${result.image}`)" />
+                            <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
+                                <g-link :to="`/event/${edge.node.id}`">
+                                    <g-image class="home-cards" :src="`https://firstmain-backend.herokuapp.com${edge.node.image}`" />
                                 </g-link>
                             </div>
                         </div>
@@ -298,10 +293,21 @@
         <!-- client carousel style 1 end-->
     </Layout>
 </template>
+<page-query>
+  query{
+  allEvent{
+    edges{
+      node{
+      id
+       image
+      }
+    }
+  }
+}
+</page-query>
 <script>
 import Sliderone from '@/components/Sliderone'
 import HomeSlider from '@/components/HomeSlider'
-import axios from 'axios'
 export default {
     name: 'Index',
     components: {
@@ -309,17 +315,7 @@ export default {
         HomeSlider
     },
     created() {
-        this.loading = true
-        axios.get('data/events.json')
-            .then((data) => {
-                console.log('hit')
-                this.results = data.data 
-                console.log(this.results)  
-            }).catch((error) => {
-                console.log(error)
-            }).finally(()=>{
-                 this.loading = false
-            })
+      
 
     },
     methods: {
@@ -346,6 +342,7 @@ export default {
     data() {
         return {
             results: [],
+            imaage:[],
             start: 0,
             hapEnd: 50,
             currEnd:10,

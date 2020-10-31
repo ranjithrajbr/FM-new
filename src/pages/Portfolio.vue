@@ -260,130 +260,7 @@
                </div>
             </div>
             <div class="row">
-               <div class="swiper-container wow  black-move swiper-pagination-bottom">
-                  <div class="swiper-wrapper">
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/1.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/../assets/images/client/2.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/3.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/4.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/5.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/6.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center   d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/7.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/8.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/9.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/10.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/11.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/12.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/13.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center d-flex flex-column align-items-center sm-margin-30px-bottom  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/14.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/15.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/16.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/17.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/18.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center   d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/19.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/20.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/21.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/22.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/23.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/24.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/25.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/26.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 sm-margin-30px-bottom margin-three-bottom text-center d-flex flex-column align-items-center justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/27.png" alt=""></a>
-                           </div>
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/28.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="swiper-slide">
-                        <div class="row">
-                           <div class="col-12 col-md-3 margin-three-bottom text-center sm-margin-30px-bottom  d-flex flex-column align-items-center  justify-content-center">
-                              <a href="javascript:void(0);"><img class="client-section" src="../assets/images/client/29.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
-               </div>
+               <Sliderone/>
             </div>
             <div class="row padding-30px-top">
                <div class="col-md-4 col-sm-4 d-flex justify-content-start img-mob">
@@ -417,9 +294,13 @@
 </template>
 
 <script>
+import Sliderone from '@/components/Sliderone'   
 export default {
 
   name: '	',
+  components:{
+   Sliderone
+  },
 
   data () {
     return {

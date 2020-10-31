@@ -6,13 +6,13 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 padding-20px-bottom">
                             <!-- <img :src="require(`../static/home-card/${image}`)" /> -->
-                            <g-image :src="`home-card/${image}`"/>
-                          
+                            <!-- <g-image :src="`home-card/${image}`"/> -->
+                          <g-image :src="`https://firstmain-backend.herokuapp.com${$page.event.image}`"/>
                         </div>
                         <div class="col-12 col-lg-6 col-md-6">
-                            <h3 class="text-uppercase">{{fdata.title}}</h3>
-                            <p>{{para1}}</p>
-                            <p>{{para2}}</p>
+                            <h3 class="text-uppercase">{{$page.event.title}}</h3>
+                            <p>{{$page.event.description}}</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Phone:</label>
                                         <ValidationProvider rules="required|digits:10" v-slot="{errors}">
-                                            <input type="number" name="Phone" placeholder="Phone*" v-model="fdata.phone" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}" />
+                                            <input type="number" name="Phone" placeholder="Phone*" v-model="fdata.phoneNumber" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}" />
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -46,7 +46,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Email:</label>
                                         <ValidationProvider rules="required|email" v-slot="{errors}">
-                                            <input type="email" name="email" v-model="fdata.email" placeholder="Email*
+                                            <input type="email" name="email" v-model="fdata.emailId" placeholder="Email*
                                 " :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
@@ -63,7 +63,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Company/Insitution Name:</label>
                                         <ValidationProvider rules="required|min:3" v-slot="{errors}">
-                                            <input type="text" name="Company/Insitution Name" placeholder="Company/Insitution Name*" v-model="fdata.companyName" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input type="text" name="Company/Insitution Name" placeholder="Company/Insitution Name*" v-model="fdata.company" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -107,25 +107,25 @@
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Event:</label>
-                                        <input type="text" name="event" id="workshop" class="input-bg" v-model="fdata.title">
+                                        <input type="text" name="event" id="workshop" :disabled="value" class="input-bg" v-model="fdata.title">
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Date:</label>
-                                        <input type="text" name="date" id="date" class="input-bg" v-model="fdata.date">
+                                        <input type="text" name="date" id="date" :disabled="value" class="input-bg" v-model="fdata.date">
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <label>Time:</label>
-                                        <input type="text" name="time" id="time" class="input-bg" v-model="fdata.time">
+                                        <input type="text" name="time" id="time" :disabled="value" class="input-bg" v-model="fdata.time">
                                     </div>
                                     <div class="col-12 text-center">
                                         <button type="submit" :disabled="invalid" class="btn btn-fm border-radius-4 btn-large margin-20px-top">Book now</button>
                                     </div>
-                                    <div v-if="flag" class=" col-12 text-center margin-20px-top alert alert-success hidden">
-                                        Thank you for registering for the workshop! An email with the details will be sent to you shortly.
+                                   <!--  <div v-if="jj" class="'col-12 text-center margin-20px-top alert alert-success">
+                                        <p>Thank you for registering for the workshop! An email with the details will be sent to you shortly.</p>
                                     </div>
-                                    <div v-else class="col-12 text-center margin-20px-top alert alert-danger hidden">
-                                        <strong>Error!</strong> Something went wrong sending your message.
-                                    </div>
+                                    <div v-else class="col-12 text-center margin-20px-top alert alert-danger">
+                                        <p><strong>Error!</strong> Something went wrong sending your message.</p>
+                                    </div> -->
                                 </div>
                             </div>
                         </form>
@@ -135,7 +135,20 @@
         </section>
     </Layout>
 </template>
-<script>
+<page-query>
+query ($id: ID!) {
+  event(id: $id) {
+    id
+    title
+    image
+    description
+    date
+  }
+}
+</page-query>
+
+<script>  
+import moment from 'moment'
 import results from '@/data/events.json'
 import axios from 'axios'
 export default {
@@ -143,44 +156,44 @@ export default {
     data() {
         return {
             theme: true,
+            value:true,
             fdata: {
-                fullName: 'test',
-                email: 'test@d.in',
-                phone: '1111111111',
-                referral: 'aaa',
-                referralCode: 'aaa',
-                designation: 'aaa',
-                companyName: 'aaa',
-                age: '11',
-                firstTime: 'yes',
+                fullName: '',
+                emailId: '',
+                phoneNumber: '',
+                referral: '',
+                referralCode: '',
+                designation: '',
+                company: '',
+                age: '',
+                firstTime: '',
                 title: '',
                 date: '',
                 time: '',
             },
+            dnt:'',
+            dt:[],
             results,
             image:'',
-            para1:'',
-             para2:'',
-            flag:true
         }
     },
     mounted() {
-        var q = this.$route.query.id
-        this.fdata.title = this.results[q].title
-        this.fdata.date = this.results[q].date
-        this.fdata.time = this.results[q].time
-        this.image = this.results[q].image
-        this.para1 = this.results[q].para1
-        this.para2 = this.results[q].para2
+        this.fdata.title = this.$page.event.title
+        this.dnt = this.$page.event.date
+        var test = moment(this.dnt).format('MMMM Do YYYY, h:mm a')
+        this.dt = test.split(',')
+        this.fdata.date=this.dt[0]
+        this.fdata.time = this.dt[1]
     },
     methods: {
         onSub() {
-            axios.post('#', this.fdata).then(response => {
-              this.flag =  true  
+            axios.post('https://firstmain-backend.herokuapp.com/participants', this.fdata).then(response => {
+            alert('success')
             }).catch((error)=>{
-                this.flag= false
+            alert('tryagain')
             })
         }
+
     }
 }
 </script>
