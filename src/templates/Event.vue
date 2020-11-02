@@ -175,7 +175,7 @@ export default {
             dt:[],
             results,
             image:'',
-            counter:2
+            counter:0
         }
     },
     mounted() {
