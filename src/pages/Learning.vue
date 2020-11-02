@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 col-md-4 padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
                             <a>
-                                <img class="learn-cards" :src="`https://res.cloudinary.com/fmcloud/image${edge.node.image}`" >
+                                <img class="learn-cards" :src="`${edge.node.image}`" >
                             </a>
                         </div>
                     </div>
