@@ -120,12 +120,12 @@
                                     <div class="col-12 text-center">
                                         <button type="submit" :disabled="invalid" class="btn btn-fm border-radius-4 btn-large margin-20px-top">Book now</button>
                                     </div>
-                                   <!--  <div v-if="jj" class="'col-12 text-center margin-20px-top alert alert-success">
+                                    <div v-if="counter==1" class="'col-12 text-center margin-20px-top alert alert-success">
                                         <p>Thank you for registering for the workshop! An email with the details will be sent to you shortly.</p>
                                     </div>
-                                    <div v-else class="col-12 text-center margin-20px-top alert alert-danger">
+                                    <div v-else-if="counter==2" class="col-12 text-center margin-20px-top alert alert-danger">
                                         <p><strong>Error!</strong> Something went wrong sending your message.</p>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -175,6 +175,7 @@ export default {
             dt:[],
             results,
             image:'',
+            counter:2
         }
     },
     mounted() {
@@ -188,9 +189,9 @@ export default {
     methods: {
         onSub() {
             axios.post('https://firstmain-backend.herokuapp.com/participants', this.fdata).then(response => {
-            alert('success')
+           this.counter =1
             }).catch((error)=>{
-            alert('tryagain')
+           this.counter = 2
             })
         }
 

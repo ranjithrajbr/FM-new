@@ -23,7 +23,7 @@
                             </div> -->
                             <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
                                 <g-link :to="`/event/${edge.node.id}`">
-                                    <g-image class="home-cards" :src="`https://firstmain-backend.herokuapp.com${edge.node.image}`" />
+                                    <g-image class="home-cards" :src="`https://res.cloudinary.com/fmcloud/image${edge.node.image}`" />
                                 </g-link>
                             </div>
                         </div>
