@@ -23,7 +23,7 @@ module.exports = function (api) {
         path:'/event/'+item.id,
         title: item.Title,
         description:item.Description,
-        image:item.image.formats.medium.url,
+        image:item.image.url,
         date:item.date
       })
     }
