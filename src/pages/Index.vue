@@ -315,8 +315,7 @@ export default {
         HomeSlider
     },
     created() {
-      
-
+     
     },
     methods: {
        

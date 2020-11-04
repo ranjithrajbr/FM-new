@@ -30,7 +30,7 @@
                 <div class="container padding-40px-top">
                     <div class="row">
                         <div class="col-12 col-lg-4 col-md-4 padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
-                            <a>
+                            <a :href="`/event/${edge.node.id}`">
                                 <img class="learn-cards" :src="`${edge.node.image}`" >
                             </a>
                         </div>

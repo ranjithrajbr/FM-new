@@ -19,7 +19,10 @@
             </section>
             <div style="height: 40px;"></div>
             <div class="container">
-                <div class="row justify-content-center">
+                <div v-if="!stats">
+                   <h2 class="text-center text-extra-dark-gray"> Registraion closed</h2>
+                </div>
+                <div v-else class="row justify-content-center">
                     <div class="col-12 col-lg-6 col-md-8 margin-eight-bottom md-margin-40px-bottom sm-margin-30px-bottom text-center last-paragraph-no-margin">
                         <h5 class="alt-font text-extra-dark-gray">Register here!</h5>
                     </div>
@@ -120,11 +123,11 @@
                                     <div class="col-12 text-center">
                                         <button type="submit" :disabled="invalid" class="btn btn-fm border-radius-4 btn-large margin-20px-top">Book now</button>
                                     </div>
-                                    <div v-if="counter==1" class="'col-12 text-center margin-20px-top alert alert-success">
-                                        <p>Thank you for registering for the workshop! An email with the details will be sent to you shortly.</p>
-                                    </div>
-                                    <div v-else-if="counter==2" class="col-12 text-center margin-20px-top alert alert-danger">
+                                    <div v-if="counter==2" class="col-12 text-center margin-20px-top alert alert-danger">
                                         <p><strong>Error!</strong> Something went wrong sending your message.</p>
+                                    </div>
+                                    <div v-else-if="counter==1" class="col-12 text-center margin-20px-top alert alert-success">
+                                        <p>Thank you for registering for the workshop! An email with the details will be sent to you shortly.</p>
                                     </div>
                                 </div>
                             </div>
@@ -175,13 +178,19 @@ export default {
             dt:[],
             results,
             image:'',
-            counter:0
+            counter:0,
+            stats:null
+
         }
     },
     mounted() {
         this.fdata.title = this.$page.event.title
         this.dnt = this.$page.event.date
         var test = moment(this.dnt).format('MMMM Do YYYY, h:mm a')
+         var eveDate = moment(this.dnt).format()
+        var today =  new Date()
+        var currDate  =moment(today).format()
+        this.stats = moment(currDate).isBefore(eveDate)
         this.dt = test.split(',')
         this.fdata.date=this.dt[0]
         this.fdata.time = this.dt[1]
