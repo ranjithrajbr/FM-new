@@ -9,6 +9,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import countTo from 'vue-count-to';
 import App from "./App.vue";
 import Inview from 'vueinview'
+import JsonCSV from 'vue-json-to-csv'
 
 // install rules and localization
 Object.keys(rules).forEach(rule => {
@@ -22,7 +23,7 @@ localize('en', en);
 Vue.component('ValidationObserver', ValidationObserver);
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('countTo', countTo);
-
+Vue.component('download-csv', JsonCSV)
 
 
 import DefaultLayout from '~/layouts/Default.vue'

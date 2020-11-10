@@ -1,5 +1,5 @@
 {
-  "name": "FM-SPA",
+  "name": "FirstMain",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -16,6 +16,7 @@
     "vee-validate": "^3.4.0",
     "vue-awesome-swiper": "^4.1.1",
     "vue-count-to": "^1.0.13",
+    "vue-json-to-csv": "^1.1.8",
     "vue-meta": "^2.4.0",
     "vueinview": "^1.0.7"
   }

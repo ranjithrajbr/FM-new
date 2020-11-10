@@ -161,15 +161,16 @@ export default {
             theme: true,
             value:true,
             fdata: {
-                fullName: '',
-                emailId: '',
-                phoneNumber: '',
-                referral: '',
-                referralCode: '',
-                designation: '',
-                company: '',
-                age: '',
-                firstTime: '',
+                eventId:null,
+                fullName: 'test1',
+                emailId: 'akashmanglore@gmail.com',
+                phoneNumber: '1111111111',
+                referral: 'aaa',
+                referralCode: '111111',
+                designation: 'aaaa',
+                company: 'aaaa',
+                age: '12',
+                firstTime: 'yes',
                 title: '',
                 date: '',
                 time: '',
@@ -184,6 +185,7 @@ export default {
         }
     },
     mounted() {
+        this.fdata.eventId =  Number(this.$page.event.id)
         this.fdata.title = this.$page.event.title
         this.dnt = this.$page.event.date
         var test = moment(this.dnt).format('MMMM Do YYYY, h:mm a')
@@ -197,7 +199,7 @@ export default {
     },
     methods: {
         onSub() {
-            axios.post('https://firstmain-backend.herokuapp.com/participants', this.fdata).then(response => {
+            axios.post('https://firstmain-backend.herokuapp.com/participants', {...this.fdata, eventId:Number(this.fdata.eventId)}).then(response => {
            this.counter =1
             }).catch((error)=>{
            this.counter = 2
