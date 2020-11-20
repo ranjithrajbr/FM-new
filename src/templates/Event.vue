@@ -1,5 +1,5 @@
 <template>
-    <Layout :theme="theme">
+    <Layout :theme="true">
         <section class="wow ">
             <section>
                 <div class="container">
@@ -58,7 +58,7 @@
                                     <div class="col-12 col-lg-6">
                                         <label>Age:</label>
                                         <ValidationProvider rules="required|numeric|max:3" v-slot="{errors}">
-                                            <input type="number" name="age" v-model="fdata.age" placeholder="Age*" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
+                                            <input type="number" name="age" v-model="fdata.Age" placeholder="Age*" :class="{'input-bg-error':errors[0],'input-bg':!errors[0]}">
                                             <div class="text-danger margin-20px-bottom">
                                                 {{errors[0]}}</div>
                                         </ValidationProvider>
@@ -152,7 +152,6 @@ query ($id: ID!) {
 
 <script>  
 import moment from 'moment'
-import results from '@/data/events.json'
 import axios from 'axios'
 export default {
     name: ' ',
@@ -162,22 +161,21 @@ export default {
             value:true,
             fdata: {
                 eventId:null,
-                fullName: 'test1',
-                emailId: 'akashmanglore@gmail.com',
-                phoneNumber: '1111111111',
-                referral: 'aaa',
-                referralCode: '111111',
-                designation: 'aaaa',
-                company: 'aaaa',
-                age: '12',
-                firstTime: 'yes',
+                fullName: '',
+                emailId: '',
+                phoneNumber: '',
+                referral: '',
+                referralCode: '',
+                designation: '',
+                company: '',
+                Age: '',
+                firstTime: '',
                 title: '',
                 date: '',
                 time: '',
             },
             dnt:'',
             dt:[],
-            results,
             image:'',
             counter:0,
             stats:null

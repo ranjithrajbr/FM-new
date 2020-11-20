@@ -455,14 +455,14 @@
 }
 </page-query>
 <script>
-import results from '@/data/events.json'
+
 export default {
 
     name: ' ',
 
     data() {
         return {
-            results
+          
         }
     }
 }
