@@ -10,7 +10,7 @@ const axios = require('axios')
 
 module.exports = function (api) {
   api.loadSource(async actions => {
-    const { data } = await axios.get('https://firstmain-backend.herokuapp.com/events')
+    const { data } = await axios.get('https://firstmain-backend.herokuapp.com/workshops')
 
     const collection = actions.addCollection({
       typeName:'Event',

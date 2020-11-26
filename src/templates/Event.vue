@@ -160,7 +160,7 @@ export default {
             theme: true,
             value:true,
             fdata: {
-                eventId:null,
+                workshopId:null,
                 fullName: '',
                 emailId: '',
                 phoneNumber: '',
@@ -183,7 +183,7 @@ export default {
         }
     },
     mounted() {
-        this.fdata.eventId =  Number(this.$page.event.id)
+        this.fdata.workshopId =  Number(this.$page.event.id)
         this.fdata.title = this.$page.event.title
         this.dnt = this.$page.event.date
         var test = moment(this.dnt).format('MMMM Do YYYY, h:mm a')
@@ -197,7 +197,7 @@ export default {
     },
     methods: {
         onSub() {
-            axios.post('https://firstmain-backend.herokuapp.com/participants', {...this.fdata, eventId:Number(this.fdata.eventId)}).then(response => {
+            axios.post('https://firstmain-backend.herokuapp.com/participants', {...this.fdata, workshopId:Number(this.fdata.workshopId)}).then(response => {
            this.counter =1
             }).catch((error)=>{
            this.counter = 2
