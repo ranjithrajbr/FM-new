@@ -25,7 +25,7 @@
                             <g-link class="nav-elearn" to="/learning">E-learning</g-link>
                         </li>
                         <li>
-                            <g-link to="/learning">Portfolio</g-link>
+                            <g-link to="/portfolio">Portfolio</g-link>
                         </li>
                         <li>
                             <g-link to="https://stack.firstmain.org" target="_blank">Blog</g-link>

@@ -29,7 +29,7 @@
                                 <g-link class="nav-port" to="/portfolio">Portfolio</g-link>
                             </li>
                             <li>
-                                <a href="/https://stack.firstmain.org" target="_blank">Blog</a>
+                                <a href="https://stack.firstmain.org" target="_blank">Blog</a>
                             </li>
                             <li>
                                 <g-link class="nav-about" to="/about">About Us</g-link>
