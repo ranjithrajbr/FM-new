@@ -13,7 +13,11 @@ module.exports = {
           // Setting a color is optional.
           color: '#000',
           // Disable the loading spinner.
-        }
+        },
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'G-NN952SMG3B'
+      }
     }
   ]
 }
