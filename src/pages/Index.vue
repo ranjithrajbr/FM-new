@@ -5,44 +5,40 @@
             <div class="height-90px"></div>
             <div class="container position-relative container-custom">
                 <div class="row">
-                    <div class="col-12 col-lg-5 col-md-8  text-md-left text-center sm-padding-15px-lr padding-40px-bottom">
-                        <div class="border-yellow-left d-flex flex-column align-items-start justify-content-center  d-inline">
-                            <span class="margin-15px-bottom position-relative overflow-hidden text-white light-font text-medium sm-margin-5px-bottom  padding-20px-lr width-80 md-width-85 sm-width-100">Ideate. Create. Operate</span>
-                            <h3 class="text-white-2 padding-20px-lr width-80 sm-width-100 semibold-font no-margin-bottom">
-                                We curate <span class="fm-yellow">workshops</span> that combine innovation & entrepreneurship
-                            </h3>
-                        </div>
-                        <!--  <a class="btn btn-small border-radius-4 sm-margin-lr-auto btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block" href="evaluate.html">Assess Your Company</a> -->
-                    </div>
-                    <div class="col-12 col-lg-7 col-md-12">
-                        <div class="row">
-                            <!--  <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvents.edges" :key="edge.node.id">
-                                <g-link :to="`/form?id=${edge.node.id}`">
-                                    <g-image class="home-cards" :src="require(`../assets/images/home-card/${edge.node.image}`)"/>
-                                </g-link>
-                            </div> -->
-                            <div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
-                                <g-link :to="`/event/${edge.node.id}`">
-                                    <g-image class="home-cards" :src="`${edge.node.image}`" />
-                                </g-link>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12 col-md-12 d-flex justify-content-center padding-20px-bottom">
-                                <a class="btn btn-large btn-yellow border-white text-extra-dark-gray border-radius-4 sm-margin-lr-auto d-table d-lg-inline-block" href="learning"><b>Click</b> to check out all our <b>workshops!</b></a>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mob-d-none">
-                            <div class="col-lg-12 col-md-12 d-flex justify-content-end padding-20px-bottom">
-                                <img style="height: 100px;" src="../assets/images/index/minion.svg">
-                            </div>
-                        </div>
-                    </div>
+                  <div
+                  class="col-12 col-lg-6 col-md-8 d-flex flex-column align-items-start justify-content-center text-md-left text-center sm-padding-15px-lr"
+                  >
+                  <span
+                     class="margin-15px-bottom position-relative overflow-hidden hr-forward text-white light-font text-medium sm-margin-5px-bottom width-80 md-width-85 sm-width-100"
+                     >Ideate. Create. Operate</span
+                     >
+                  <h3 class="text-white-2 semibold-font">
+                     We combine innovation & community-driven entrepreneurship
+                  </h3>
+                  <a
+                     class="btn btn-small sm-margin-lr-auto btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block"
+                     href="evaluate"
+                     >Assess Your Company</a
+                     >
+               </div>
                     <div id="lg-md-d-none" class="col-sm-12 d-flex justify-content-center">
                         <img style="width: 50%; height: 100%;" src="../assets/images/index/rocket.svg" />
                     </div>
                 </div>
             </div>
+             <div class="position-relative">
+            <div id="first" class="container-fluid ">
+               <div class="row justify-content-end align-items-center">
+                  <div class="col-12 col-lg-4 col-md-6 bg-white text-md-left text-center padding-four-all">
+                     <p class="margin-15px-bottom light-font text-extra-dark-gray text-medium sm-margin-5px-bottom">We are an</p>
+                     <h3 class='text-extra-dark-gray semibold-font width-60 sm-width-100'>innovation aggregator</h3>
+                     <div class="center-mob " style="width:20%;border:1px solid #ED7015;"></div>
+                     <p class="text-extra-dark-gray light-font margin-10px-top width-90 sm-width-100">that aims at filling the gaps in the existing entrepreneurial environment by working to enable and empower entrepreneurs at the foundation and early-stage startups.</p>
+                     <a class="btn btn-medium btn-fm sm-margin-lr-auto  d-table d-lg-inline-block" role="button" href="about">About us</a>
+                  </div>
+               </div>
+            </div>
+         </div>
             <!-- end page title section -->
             <div style="background: linear-gradient(0deg, #f8f9fa 30% 70%, #ffffff 70% 30%);" class="position-relative">
                 <div id="second" class="container container-custom">
@@ -299,7 +295,7 @@
     edges{
       node{
       id
-       image
+     
       }
     }
   }

@@ -27,7 +27,7 @@
                         <h3 class="semibold-font text-center text-extra-dark-gray">Which workshop are you interested in?</h3>
                     </div>
                 </div>
-                <div class="container padding-40px-top">
+                <!-- <div class="container padding-40px-top">
                     <div class="row">
                         <div class="col-12 col-lg-4 col-md-4 padding-40px-bottom" v-for="edge in $page.allEvent.edges" :key="edge.node.id">
                             <a :href="`/event/${edge.node.id}`">
@@ -35,7 +35,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="container padding-30px-lr position-relative">
                 <div class=" row justify-content-center ">
@@ -449,7 +449,7 @@
     edges{
     node{
     id
-    image
+   
 }
 }
 }
