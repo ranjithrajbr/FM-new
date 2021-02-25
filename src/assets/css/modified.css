@@ -3,6 +3,9 @@
 // #Alerts
 // --------------------------------------------------
 */
+.img-circle{
+  clip-path:circle(49px at 50% 50%)
+}
 .bg-fm-grey{
 background-color:#F8F9FA;
 }
@@ -590,6 +593,12 @@ figure:hover .title-vanish {
   }
 }
 @media (max-width: 700px) {
+  .img-circle{
+    clip-path:circle(32px at 50% 50%)
+}
+  .sm-width-73px{
+    width:73px;
+  }
   .sm-h-20px{
     height: 20px !important;
   }

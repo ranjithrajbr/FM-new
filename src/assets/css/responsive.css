@@ -13973,6 +13973,12 @@
   .sm-margin-10px-left {
     margin-left: 10px !important;
   }
+  .sm-width-73px{
+    width:73px;
+  }
+  .img-circle{
+    clip-path:circle(32px at 50% 50%)
+}
 
   .sm-margin-15px-left {
     margin-left: 15px !important;
