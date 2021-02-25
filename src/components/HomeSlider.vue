@@ -46,7 +46,7 @@
                         <img src="../assets/images/about/arjun.png" alt="" class="img-circle width-110px margin-50px-right lg-width-100px md-width-120px sm-width-73px sm-no-margin-right sm-margin-15px-bottom" />
                         <div class="media-body last-paragraph-no-margin">
                             <p class="text-extra-light-gray text-medium light-font">We all get dealt the same pack of cards but the way we play is what separates us from being creators and following the herd and entrepreneurship is a journey we take to build our business and create a brand.</p>
-                            <span class="text-white-2 medium-font d-block text-medium margin-15px-top project-font">Arjun Chadda</span>
+                            <span class="text-white-2 medium-font d-block text-medium margin-15px-top project-font">Arjun Chaddha</span>
                         </div>
                     </div>
                 </div>

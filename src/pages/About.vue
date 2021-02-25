@@ -196,7 +196,7 @@
                         <figcaption>
                             <div class="text-center team-member-position margin-20px-top">
                                 <div class="text-small project-font font-weight-500 text-extra-dark-gray text-uppercase">
-                                    Arjun Chadda
+                                    Arjun Chaddha
                                 </div>
                             </div>
                         </figcaption>
